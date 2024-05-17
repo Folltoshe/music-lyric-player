@@ -1,6 +1,6 @@
 {
   "name": "music-lyric-player",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Lyric Player",
   "main": "./dist/music-lyric-player.js",
   "module": "./dist/music-lyric-player.esm.js",
