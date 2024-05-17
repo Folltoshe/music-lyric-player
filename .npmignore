@@ -1,8 +1,9 @@
 .history
 .github
+src
+test
 .babelrc
-package-lock.json
+nodemon.json
 tsconfig.json
 rollup.config.js
-rollup.config.iife.js
-src
+package-lock.json
