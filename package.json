@@ -1,0 +1,60 @@
+{
+  "name": "music-lyric-player",
+  "version": "1.0.0",
+  "description": "A Lyric Player",
+  "main": "./dist/music-lyric-player.js",
+  "module": "./dist/music-lyric-player.esm.js",
+  "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "build": "rimraf dist && rollup -c"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/music-lyric-player.js",
+      "default": "./dist/music-lyric-player.esm.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Folltoshe/music-lyric-player.git"
+  },
+  "keywords": [
+    "lyric",
+    "player"
+  ],
+  "author": "Folltoshe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Folltoshe/music-lyric-player/issues"
+  },
+  "homepage": "https://github.com/Folltoshe/music-lyric-player#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/preset-env": "^7.21.4",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.1.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.1",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@tsconfig/recommended": "^1.0.2",
+    "@types/lodash": "^4.17.4",
+    "nodemon": "^3.1.0",
+    "rimraf": "^5.0.7",
+    "rollup": "^3.20.7",
+    "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.8",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.2.2"
+  }
+}

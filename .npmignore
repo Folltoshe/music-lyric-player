@@ -1,0 +1,8 @@
+.history
+.github
+.babelrc
+package-lock.json
+tsconfig.json
+rollup.config.js
+rollup.config.iife.js
+src

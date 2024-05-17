@@ -1,0 +1,5 @@
+{
+  "ext": "js,ts",
+  "ignore": [],
+  "exec": "node -r ts-node/register -r tsconfig-paths/register ./test/index.ts"
+}
