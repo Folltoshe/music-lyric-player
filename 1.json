@@ -1,0 +1,3595 @@
+{
+  "scroll": true,
+  "lyrics": [
+    { "time": 500, "duration": 14381, "content": { "original": "" } },
+    {
+      "time": 14881,
+      "duration": 3321,
+      "content": {
+        "original": "当我好奇地乱敲着黑白的琴键",
+        "dynamic": {
+          "time": 14881,
+          "words": [
+            {
+              "time": 0,
+              "duration": 375,
+              "text": "当",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 376,
+              "duration": 233,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 609,
+              "duration": 237,
+              "text": "好",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 846,
+              "duration": 198,
+              "text": "奇",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1044,
+              "duration": 233,
+              "text": "地",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1277,
+              "duration": 199,
+              "text": "乱",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1477,
+              "duration": 251,
+              "text": "敲",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1729,
+              "duration": 179,
+              "text": "着",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1908,
+              "duration": 234,
+              "text": "黑",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2143,
+              "duration": 236,
+              "text": "白",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2379,
+              "duration": 215,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2595,
+              "duration": 431,
+              "text": "琴",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3026,
+              "duration": 300,
+              "text": "键",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "当我好奇地乱敲着黑白的琴键"
+      }
+    },
+    {
+      "time": 18619,
+      "duration": 3114,
+      "content": {
+        "original": "当我躲在房间乐极忘形地表演",
+        "dynamic": {
+          "time": 18619,
+          "words": [
+            {
+              "time": 0,
+              "duration": 190,
+              "text": "当",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 191,
+              "duration": 197,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 388,
+              "duration": 235,
+              "text": "躲",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 624,
+              "duration": 216,
+              "text": "在",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 840,
+              "duration": 216,
+              "text": "房",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1057,
+              "duration": 217,
+              "text": "间",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1274,
+              "duration": 195,
+              "text": "乐",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1470,
+              "duration": 254,
+              "text": "极",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1724,
+              "duration": 216,
+              "text": "忘",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1941,
+              "duration": 233,
+              "text": "形",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2174,
+              "duration": 224,
+              "text": "地",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2398,
+              "duration": 426,
+              "text": "表",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2825,
+              "duration": 295,
+              "text": "演",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "当我躲在房间乐极忘形地表演"
+      }
+    },
+    {
+      "time": 22190,
+      "duration": 4475,
+      "content": {
+        "original": "你微笑的双眼 是否当时早有预感",
+        "dynamic": {
+          "time": 22190,
+          "words": [
+            {
+              "time": 0,
+              "duration": 190,
+              "text": "你",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 190,
+              "duration": 196,
+              "text": "微",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 387,
+              "duration": 199,
+              "text": "笑",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 586,
+              "duration": 216,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 802,
+              "duration": 433,
+              "text": "双",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1236,
+              "duration": 252,
+              "text": "眼 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": false }
+            },
+            {
+              "time": 1723,
+              "duration": 297,
+              "text": "是",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2020,
+              "duration": 251,
+              "text": "否",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2272,
+              "duration": 262,
+              "text": "当",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2534,
+              "duration": 251,
+              "text": "时",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2786,
+              "duration": 551,
+              "text": "早",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3337,
+              "duration": 350,
+              "text": "有",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3688,
+              "duration": 593,
+              "text": "预",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4281,
+              "duration": 434,
+              "text": "感",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "你微笑的双眼  是否当时早有预感"
+      }
+    },
+    {
+      "time": 27104,
+      "duration": 1918,
+      "content": {
+        "original": "看到了今天",
+        "dynamic": {
+          "time": 27104,
+          "words": [
+            {
+              "time": 0,
+              "duration": 199,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 199,
+              "duration": 233,
+              "text": "到",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 433,
+              "duration": 685,
+              "text": "了",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1118,
+              "duration": 378,
+              "text": "今",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1497,
+              "duration": 423,
+              "text": "天",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "看到了今天"
+      }
+    },
+    {
+      "time": 29341,
+      "duration": 3202,
+      "content": {
+        "original": "当我没日没夜听着最爱的唱片",
+        "dynamic": {
+          "time": 29341,
+          "words": [
+            {
+              "time": 0,
+              "duration": 215,
+              "text": "当",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 216,
+              "duration": 179,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 395,
+              "duration": 236,
+              "text": "没",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 631,
+              "duration": 234,
+              "text": "日",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 866,
+              "duration": 253,
+              "text": "没",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1119,
+              "duration": 215,
+              "text": "夜",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1335,
+              "duration": 214,
+              "text": "听",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1550,
+              "duration": 181,
+              "text": "着",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1731,
+              "duration": 199,
+              "text": "最",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1930,
+              "duration": 250,
+              "text": "爱",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2181,
+              "duration": 254,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2435,
+              "duration": 431,
+              "text": "唱",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2866,
+              "duration": 341,
+              "text": "片",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "当我没日没夜听着最爱的唱片"
+      }
+    },
+    {
+      "time": 32919,
+      "duration": 3157,
+      "content": {
+        "original": "当我书本每一页都画满了和弦",
+        "dynamic": {
+          "time": 32919,
+          "words": [
+            {
+              "time": 0,
+              "duration": 235,
+              "text": "当",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 235,
+              "duration": 216,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 452,
+              "duration": 232,
+              "text": "书",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 685,
+              "duration": 236,
+              "text": "本",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 921,
+              "duration": 178,
+              "text": "每",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1100,
+              "duration": 216,
+              "text": "一",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1316,
+              "duration": 233,
+              "text": "页",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1549,
+              "duration": 217,
+              "text": "都",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1767,
+              "duration": 216,
+              "text": "画",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1984,
+              "duration": 197,
+              "text": "满",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2181,
+              "duration": 235,
+              "text": "了",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2417,
+              "duration": 432,
+              "text": "和",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2850,
+              "duration": 314,
+              "text": "弦",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "当我书本每一页都画满了和弦"
+      }
+    },
+    {
+      "time": 36356,
+      "duration": 3254,
+      "content": {
+        "original": "你从不曾熄灭 我天真的火焰",
+        "dynamic": {
+          "time": 36356,
+          "words": [
+            {
+              "time": 0,
+              "duration": 216,
+              "text": "你",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 216,
+              "duration": 160,
+              "text": "从",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 377,
+              "duration": 216,
+              "text": "不",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 593,
+              "duration": 209,
+              "text": "曾",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 802,
+              "duration": 216,
+              "text": "熄",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1018,
+              "duration": 629,
+              "text": "灭 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": false }
+            },
+            {
+              "time": 1648,
+              "duration": 216,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1865,
+              "duration": 235,
+              "text": "天",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2100,
+              "duration": 233,
+              "text": "真",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2334,
+              "duration": 260,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2594,
+              "duration": 408,
+              "text": "火",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3003,
+              "duration": 256,
+              "text": "焰",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "你从不曾熄灭  我天真的火焰"
+      }
+    },
+    {
+      "time": 39841,
+      "duration": 4281,
+      "content": {
+        "original": "不怪我在浪费时间",
+        "dynamic": {
+          "time": 39841,
+          "words": [
+            {
+              "time": 0,
+              "duration": 323,
+              "text": "不",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 324,
+              "duration": 588,
+              "text": "怪",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 912,
+              "duration": 591,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1504,
+              "duration": 425,
+              "text": "在",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1929,
+              "duration": 216,
+              "text": "浪",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2146,
+              "duration": 432,
+              "text": "费",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2579,
+              "duration": 513,
+              "text": "时",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3093,
+              "duration": 1193,
+              "text": "间",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "不怪我在浪费时间"
+      }
+    },
+    {
+      "time": 44641,
+      "duration": 5529,
+      "content": {
+        "original": "是你的无条件 成就了这一切",
+        "dynamic": {
+          "time": 44641,
+          "words": [
+            {
+              "time": 0,
+              "duration": 440,
+              "text": "是",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 440,
+              "duration": 214,
+              "text": "你",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 655,
+              "duration": 216,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 872,
+              "duration": 530,
+              "text": "无",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1402,
+              "duration": 407,
+              "text": "条",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1809,
+              "duration": 847,
+              "text": "件 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": false }
+            },
+            {
+              "time": 3776,
+              "duration": 177,
+              "text": "成",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3954,
+              "duration": 179,
+              "text": "就",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4134,
+              "duration": 469,
+              "text": "了",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4604,
+              "duration": 414,
+              "text": "这",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5018,
+              "duration": 389,
+              "text": "一",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5407,
+              "duration": 1247,
+              "text": "切",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "是你的无条件  成就了这一切"
+      }
+    },
+    {
+      "time": 51809,
+      "duration": 3004,
+      "content": {
+        "original": "是你让我看见",
+        "dynamic": {
+          "time": 51809,
+          "words": [
+            {
+              "time": 0,
+              "duration": 359,
+              "text": "是",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 359,
+              "duration": 195,
+              "text": "你",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 555,
+              "duration": 452,
+              "text": "让",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1007,
+              "duration": 431,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1439,
+              "duration": 451,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1890,
+              "duration": 1116,
+              "text": "见",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "是你让我看见"
+      }
+    },
+    {
+      "time": 55276,
+      "duration": 6235,
+      "content": {
+        "original": "天空没有极限 我的未来无边",
+        "dynamic": {
+          "time": 55276,
+          "words": [
+            {
+              "time": 0,
+              "duration": 216,
+              "text": "天",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 217,
+              "duration": 231,
+              "text": "空",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 449,
+              "duration": 409,
+              "text": "没",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 859,
+              "duration": 356,
+              "text": "有",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1216,
+              "duration": 526,
+              "text": "极",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1742,
+              "duration": 1298,
+              "text": "限 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": true }
+            },
+            {
+              "time": 3609,
+              "duration": 225,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3834,
+              "duration": 207,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4042,
+              "duration": 358,
+              "text": "未",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4400,
+              "duration": 433,
+              "text": "来",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4834,
+              "duration": 567,
+              "text": "无",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5402,
+              "duration": 1409,
+              "text": "边",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "天空没有极限  我的未来无边"
+      }
+    },
+    {
+      "time": 62481,
+      "duration": 6789,
+      "content": {
+        "original": "破茧的我会飞向更蔚蓝的明天",
+        "dynamic": {
+          "time": 62481,
+          "words": [
+            {
+              "time": 0,
+              "duration": 216,
+              "text": "破",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 217,
+              "duration": 216,
+              "text": "茧",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 434,
+              "duration": 368,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 803,
+              "duration": 457,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1261,
+              "duration": 407,
+              "text": "会",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1668,
+              "duration": 847,
+              "text": "飞",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2516,
+              "duration": 533,
+              "text": "向",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3049,
+              "duration": 394,
+              "text": "更",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3444,
+              "duration": 450,
+              "text": "蔚",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3894,
+              "duration": 543,
+              "text": "蓝",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4438,
+              "duration": 612,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5051,
+              "duration": 430,
+              "text": "明",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5482,
+              "duration": 1316,
+              "text": "天",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "破茧的我会飞向更蔚蓝的明天"
+      }
+    },
+    {
+      "time": 69537,
+      "duration": 6770,
+      "content": {
+        "original": "前方路若遥远 回头看看从前",
+        "dynamic": {
+          "time": 69537,
+          "words": [
+            {
+              "time": 0,
+              "duration": 354,
+              "text": "前",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 355,
+              "duration": 209,
+              "text": "方",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 564,
+              "duration": 358,
+              "text": "路",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 923,
+              "duration": 452,
+              "text": "若",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1375,
+              "duration": 413,
+              "text": "遥",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1789,
+              "duration": 1606,
+              "text": "远 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": true }
+            },
+            {
+              "time": 3594,
+              "duration": 269,
+              "text": "回",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3864,
+              "duration": 224,
+              "text": "头",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4088,
+              "duration": 408,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4496,
+              "duration": 466,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4963,
+              "duration": 397,
+              "text": "从",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5360,
+              "duration": 1614,
+              "text": "前",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "前方路若遥远  回头看看从前"
+      }
+    },
+    {
+      "time": 76705,
+      "duration": 7736,
+      "content": {
+        "original": "看看镜子里的你带着曾经的我",
+        "dynamic": {
+          "time": 76705,
+          "words": [
+            {
+              "time": 0,
+              "duration": 257,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 258,
+              "duration": 231,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 490,
+              "duration": 397,
+              "text": "镜",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 887,
+              "duration": 426,
+              "text": "子",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1313,
+              "duration": 456,
+              "text": "里",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1770,
+              "duration": 804,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2574,
+              "duration": 784,
+              "text": "你",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3358,
+              "duration": 234,
+              "text": "带",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3593,
+              "duration": 367,
+              "text": "着",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3961,
+              "duration": 433,
+              "text": "曾",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4395,
+              "duration": 533,
+              "text": "经",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4928,
+              "duration": 451,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5379,
+              "duration": 2363,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "看看镜子里的你带着曾经的我"
+      }
+    },
+    {
+      "time": 84513,
+      "duration": 3068,
+      "content": {
+        "original": "已走了多远",
+        "dynamic": {
+          "time": 84513,
+          "words": [
+            {
+              "time": 0,
+              "duration": 463,
+              "text": "已",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 463,
+              "duration": 209,
+              "text": "走",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 672,
+              "duration": 179,
+              "text": "了",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 852,
+              "duration": 332,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1185,
+              "duration": 1885,
+              "text": "远",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "已走了多远"
+      }
+    },
+    {
+      "time": 88353,
+      "duration": 3319,
+      "content": {
+        "original": "多少次我心里浮现失控的画面",
+        "dynamic": {
+          "time": 88353,
+          "words": [
+            {
+              "time": 0,
+              "duration": 347,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 348,
+              "duration": 199,
+              "text": "少",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 547,
+              "duration": 234,
+              "text": "次",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 782,
+              "duration": 214,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 997,
+              "duration": 234,
+              "text": "心",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1232,
+              "duration": 225,
+              "text": "里",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1457,
+              "duration": 215,
+              "text": "浮",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1673,
+              "duration": 228,
+              "text": "现",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1901,
+              "duration": 214,
+              "text": "失",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2116,
+              "duration": 198,
+              "text": "控",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2314,
+              "duration": 242,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2557,
+              "duration": 390,
+              "text": "画",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2947,
+              "duration": 379,
+              "text": "面",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "多少次我心里浮现失控的画面"
+      }
+    },
+    {
+      "time": 91965,
+      "duration": 3331,
+      "content": {
+        "original": "多少冷言冷语汹涌地来到耳边",
+        "dynamic": {
+          "time": 91965,
+          "words": [
+            {
+              "time": 0,
+              "duration": 295,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 296,
+              "duration": 198,
+              "text": "少",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 494,
+              "duration": 272,
+              "text": "冷",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 767,
+              "duration": 215,
+              "text": "言",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 982,
+              "duration": 218,
+              "text": "冷",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1200,
+              "duration": 233,
+              "text": "语",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1434,
+              "duration": 197,
+              "text": "汹",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1632,
+              "duration": 234,
+              "text": "涌",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1867,
+              "duration": 180,
+              "text": "地",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2047,
+              "duration": 233,
+              "text": "来",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2280,
+              "duration": 254,
+              "text": "到",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2535,
+              "duration": 432,
+              "text": "耳",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2967,
+              "duration": 370,
+              "text": "边",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "多少冷言冷语汹涌地来到耳边"
+      }
+    },
+    {
+      "time": 95598,
+      "duration": 4268,
+      "content": {
+        "original": "多少夜失眠 你是否也曾度日如年",
+        "dynamic": {
+          "time": 95598,
+          "words": [
+            {
+              "time": 0,
+              "duration": 251,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 252,
+              "duration": 215,
+              "text": "少",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 468,
+              "duration": 217,
+              "text": "夜",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 685,
+              "duration": 358,
+              "text": "失",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1044,
+              "duration": 352,
+              "text": "眠 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": false }
+            },
+            {
+              "time": 1649,
+              "duration": 197,
+              "text": "你",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1847,
+              "duration": 198,
+              "text": "是",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2046,
+              "duration": 216,
+              "text": "否",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2263,
+              "duration": 234,
+              "text": "也",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2497,
+              "duration": 217,
+              "text": "曾",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2715,
+              "duration": 628,
+              "text": "度",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3343,
+              "duration": 334,
+              "text": "日",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3677,
+              "duration": 533,
+              "text": "如",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4210,
+              "duration": 318,
+              "text": "年",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "多少夜失眠  你是否也曾度日如年"
+      }
+    },
+    {
+      "time": 100512,
+      "duration": 1982,
+      "content": {
+        "original": "差一点沦陷",
+        "dynamic": {
+          "time": 100512,
+          "words": [
+            {
+              "time": 0,
+              "duration": 289,
+              "text": "差",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 289,
+              "duration": 218,
+              "text": "一",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 507,
+              "duration": 547,
+              "text": "点",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1055,
+              "duration": 442,
+              "text": "沦",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1497,
+              "duration": 486,
+              "text": "陷",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "差一点沦陷"
+      }
+    },
+    {
+      "time": 102793,
+      "duration": 3278,
+      "content": {
+        "original": "当我落寞地遥望着再来的春天",
+        "dynamic": {
+          "time": 102793,
+          "words": [
+            {
+              "time": 0,
+              "duration": 216,
+              "text": "当",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 217,
+              "duration": 208,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 426,
+              "duration": 231,
+              "text": "落",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 658,
+              "duration": 218,
+              "text": "寞",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 876,
+              "duration": 216,
+              "text": "地",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1093,
+              "duration": 216,
+              "text": "遥",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1309,
+              "duration": 223,
+              "text": "望",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1533,
+              "duration": 234,
+              "text": "着",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1767,
+              "duration": 209,
+              "text": "再",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1976,
+              "duration": 198,
+              "text": "来",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2175,
+              "duration": 195,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2371,
+              "duration": 451,
+              "text": "春",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2823,
+              "duration": 463,
+              "text": "天",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "当我落寞地遥望着再来的春天"
+      }
+    },
+    {
+      "time": 106401,
+      "duration": 3194,
+      "content": {
+        "original": "当我默默地把眼泪流在心里面",
+        "dynamic": {
+          "time": 106401,
+          "words": [
+            {
+              "time": 0,
+              "duration": 216,
+              "text": "当",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 217,
+              "duration": 215,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 432,
+              "duration": 234,
+              "text": "默",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 667,
+              "duration": 251,
+              "text": "默",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 918,
+              "duration": 216,
+              "text": "地",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1135,
+              "duration": 188,
+              "text": "把",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1324,
+              "duration": 210,
+              "text": "眼",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1534,
+              "duration": 239,
+              "text": "泪",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1774,
+              "duration": 216,
+              "text": "流",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1991,
+              "duration": 271,
+              "text": "在",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2262,
+              "duration": 236,
+              "text": "心",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2498,
+              "duration": 295,
+              "text": "里",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2794,
+              "duration": 407,
+              "text": "面",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "当我默默地把眼泪流在心里面"
+      }
+    },
+    {
+      "time": 109925,
+      "duration": 4179,
+      "content": {
+        "original": "当一切违愿 谁不曾埋怨",
+        "dynamic": {
+          "time": 109925,
+          "words": [
+            {
+              "time": 0,
+              "duration": 210,
+              "text": "当",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 210,
+              "duration": 239,
+              "text": "一",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 450,
+              "duration": 233,
+              "text": "切",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 683,
+              "duration": 433,
+              "text": "违",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1117,
+              "duration": 471,
+              "text": "愿 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": false }
+            },
+            {
+              "time": 1588,
+              "duration": 387,
+              "text": "谁",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1976,
+              "duration": 224,
+              "text": "不",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2200,
+              "duration": 350,
+              "text": "曾",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2551,
+              "duration": 254,
+              "text": "埋",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2805,
+              "duration": 1378,
+              "text": "怨",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "当一切违愿  谁不曾埋怨"
+      }
+    },
+    {
+      "time": 114452,
+      "duration": 3080,
+      "content": {
+        "original": "进退都在一念间",
+        "dynamic": {
+          "time": 114452,
+          "words": [
+            {
+              "time": 0,
+              "duration": 198,
+              "text": "进",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 198,
+              "duration": 197,
+              "text": "退",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 396,
+              "duration": 352,
+              "text": "都",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 748,
+              "duration": 260,
+              "text": "在",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1009,
+              "duration": 406,
+              "text": "一",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1415,
+              "duration": 414,
+              "text": "念",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1830,
+              "duration": 1253,
+              "text": "间",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "进退都在一念间"
+      }
+    },
+    {
+      "time": 118490,
+      "duration": 5576,
+      "content": {
+        "original": "但你却无条件 扛下了这一切",
+        "dynamic": {
+          "time": 118490,
+          "words": [
+            {
+              "time": 0,
+              "duration": 476,
+              "text": "但",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 476,
+              "duration": 236,
+              "text": "你",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 713,
+              "duration": 332,
+              "text": "却",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1046,
+              "duration": 406,
+              "text": "无",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1453,
+              "duration": 457,
+              "text": "条",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1911,
+              "duration": 823,
+              "text": "件 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": false }
+            },
+            {
+              "time": 3870,
+              "duration": 179,
+              "text": "扛",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4049,
+              "duration": 216,
+              "text": "下",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4266,
+              "duration": 278,
+              "text": "了",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4544,
+              "duration": 432,
+              "text": "这",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4977,
+              "duration": 469,
+              "text": "一",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5446,
+              "duration": 1272,
+              "text": "切",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "但你却无条件  扛下了这一切"
+      }
+    },
+    {
+      "time": 125281,
+      "duration": 3130,
+      "content": {
+        "original": "是你让我看见",
+        "dynamic": {
+          "time": 125281,
+          "words": [
+            {
+              "time": 0,
+              "duration": 278,
+              "text": "是",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 279,
+              "duration": 287,
+              "text": "你",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 567,
+              "duration": 531,
+              "text": "让",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1099,
+              "duration": 433,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1533,
+              "duration": 450,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1983,
+              "duration": 1151,
+              "text": "见",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "是你让我看见"
+      }
+    },
+    {
+      "time": 128859,
+      "duration": 5489,
+      "content": {
+        "original": "天空没有极限 我的未来无边",
+        "dynamic": {
+          "time": 128859,
+          "words": [
+            {
+              "time": 0,
+              "duration": 189,
+              "text": "天",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 190,
+              "duration": 180,
+              "text": "空",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 370,
+              "duration": 316,
+              "text": "没",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 686,
+              "duration": 432,
+              "text": "有",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1119,
+              "duration": 524,
+              "text": "极",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1643,
+              "duration": 711,
+              "text": "限 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": false }
+            },
+            {
+              "time": 3417,
+              "duration": 235,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3653,
+              "duration": 234,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3887,
+              "duration": 388,
+              "text": "未",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4276,
+              "duration": 432,
+              "text": "来",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4708,
+              "duration": 459,
+              "text": "无",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5167,
+              "duration": 1389,
+              "text": "边",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "天空没有极限  我的未来无边"
+      }
+    },
+    {
+      "time": 135892,
+      "duration": 6854,
+      "content": {
+        "original": "破茧的我会飞向更蔚蓝的明天",
+        "dynamic": {
+          "time": 135892,
+          "words": [
+            {
+              "time": 0,
+              "duration": 217,
+              "text": "破",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 217,
+              "duration": 233,
+              "text": "茧",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 450,
+              "duration": 352,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 803,
+              "duration": 370,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1173,
+              "duration": 532,
+              "text": "会",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1705,
+              "duration": 802,
+              "text": "飞",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2508,
+              "duration": 475,
+              "text": "向",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2984,
+              "duration": 454,
+              "text": "更",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3438,
+              "duration": 421,
+              "text": "蔚",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3860,
+              "duration": 496,
+              "text": "蓝",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4357,
+              "duration": 550,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4907,
+              "duration": 393,
+              "text": "明",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5300,
+              "duration": 1559,
+              "text": "天",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "破茧的我会飞向更蔚蓝的明天"
+      }
+    },
+    {
+      "time": 142945,
+      "duration": 6798,
+      "content": {
+        "original": "前方路若遥远 回头看看从前",
+        "dynamic": {
+          "time": 142945,
+          "words": [
+            {
+              "time": 0,
+              "duration": 331,
+              "text": "前",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 331,
+              "duration": 216,
+              "text": "方",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 548,
+              "duration": 332,
+              "text": "路",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 881,
+              "duration": 352,
+              "text": "若",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1233,
+              "duration": 515,
+              "text": "遥",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1749,
+              "duration": 1641,
+              "text": "远 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": true }
+            },
+            {
+              "time": 3624,
+              "duration": 278,
+              "text": "回",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3902,
+              "duration": 252,
+              "text": "头",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4155,
+              "duration": 396,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4551,
+              "duration": 396,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4948,
+              "duration": 425,
+              "text": "从",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5374,
+              "duration": 1664,
+              "text": "前",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "前方路若遥远  回头看看从前"
+      }
+    },
+    {
+      "time": 150113,
+      "duration": 7352,
+      "content": {
+        "original": "看看镜子里的你带着曾经的我",
+        "dynamic": {
+          "time": 150113,
+          "words": [
+            {
+              "time": 0,
+              "duration": 331,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 332,
+              "duration": 233,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 565,
+              "duration": 336,
+              "text": "镜",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 901,
+              "duration": 449,
+              "text": "子",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1351,
+              "duration": 451,
+              "text": "里",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1803,
+              "duration": 783,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2587,
+              "duration": 575,
+              "text": "你",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3162,
+              "duration": 388,
+              "text": "带",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3551,
+              "duration": 433,
+              "text": "着",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3984,
+              "duration": 449,
+              "text": "曾",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4434,
+              "duration": 500,
+              "text": "经",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4934,
+              "duration": 429,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5363,
+              "duration": 1995,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "看看镜子里的你带着曾经的我"
+      }
+    },
+    {
+      "time": 158177,
+      "duration": 2748,
+      "content": {
+        "original": "已走了多远",
+        "dynamic": {
+          "time": 158177,
+          "words": [
+            {
+              "time": 0,
+              "duration": 491,
+              "text": "已",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 491,
+              "duration": 296,
+              "text": "走",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 788,
+              "duration": 353,
+              "text": "了",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1142,
+              "duration": 450,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1592,
+              "duration": 1158,
+              "text": "远",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "已走了多远"
+      }
+    },
+    {
+      "time": 165409,
+      "duration": 7260,
+      "content": {
+        "original": "走了多远 多远 有多远 有多远",
+        "dynamic": {
+          "time": 165409,
+          "words": [
+            {
+              "time": 0,
+              "duration": 391,
+              "text": "走",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 392,
+              "duration": 224,
+              "text": "了",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 616,
+              "duration": 424,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1040,
+              "duration": 1250,
+              "text": "远 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": true }
+            },
+            {
+              "time": 11441,
+              "duration": 432,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 11874,
+              "duration": 1234,
+              "text": "远 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": true }
+            },
+            {
+              "time": 14679,
+              "duration": 198,
+              "text": "有",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 14877,
+              "duration": 163,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 15040,
+              "duration": 1170,
+              "text": "远 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": true }
+            },
+            {
+              "time": 18256,
+              "duration": 197,
+              "text": "有",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 18453,
+              "duration": 353,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 18806,
+              "duration": 1224,
+              "text": "远",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "走了多远  多远  有多远  有多远"
+      }
+    },
+    { "time": 172669, "duration": 16868, "content": { "original": "" } },
+    {
+      "time": 189537,
+      "duration": 7199,
+      "content": {
+        "original": "看看从前 我已走了多远",
+        "dynamic": {
+          "time": 189537,
+          "words": [
+            {
+              "time": 0,
+              "duration": 533,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 533,
+              "duration": 782,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1315,
+              "duration": 414,
+              "text": "从",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1730,
+              "duration": 1568,
+              "text": "前 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": true }
+            },
+            {
+              "time": 7230,
+              "duration": 217,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 7447,
+              "duration": 215,
+              "text": "已",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 7663,
+              "duration": 396,
+              "text": "走",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 8059,
+              "duration": 522,
+              "text": "了",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 8582,
+              "duration": 550,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 9132,
+              "duration": 2002,
+              "text": "远",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "看看从前  我已走了多远"
+      }
+    },
+    { "time": 196736, "duration": 6945, "content": { "original": "" } },
+    {
+      "time": 203681,
+      "duration": 8127,
+      "content": {
+        "original": "我的世界 我看不到边界",
+        "dynamic": {
+          "time": 203681,
+          "words": [
+            {
+              "time": 0,
+              "duration": 451,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 451,
+              "duration": 704,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1156,
+              "duration": 749,
+              "text": "世",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1905,
+              "duration": 2241,
+              "text": "界 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": true }
+            },
+            {
+              "time": 7405,
+              "duration": 252,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 7658,
+              "duration": 239,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 7897,
+              "duration": 371,
+              "text": "不",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 8269,
+              "duration": 451,
+              "text": "到",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 8721,
+              "duration": 477,
+              "text": "边",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 9198,
+              "duration": 2192,
+              "text": "界",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "我的世界  我看不到边界"
+      }
+    },
+    { "time": 211808, "duration": 6663, "content": { "original": "" } },
+    {
+      "time": 218471,
+      "duration": 4355,
+      "content": {
+        "original": "天空没有极限 我的未来无边",
+        "dynamic": {
+          "time": 218471,
+          "words": [
+            {
+              "time": 0,
+              "duration": 162,
+              "text": "天",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 163,
+              "duration": 153,
+              "text": "空",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 316,
+              "duration": 335,
+              "text": "没",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 651,
+              "duration": 413,
+              "text": "有",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1065,
+              "duration": 449,
+              "text": "极",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1515,
+              "duration": 1124,
+              "text": "限 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": true }
+            },
+            {
+              "time": 3604,
+              "duration": 172,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3776,
+              "duration": 141,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3918,
+              "duration": 334,
+              "text": "未",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4252,
+              "duration": 524,
+              "text": "来",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4776,
+              "duration": 335,
+              "text": "无",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5112,
+              "duration": 213,
+              "text": "边",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "天空没有极限  我的未来无边"
+      }
+    },
+    {
+      "time": 223797,
+      "duration": 4926,
+      "content": {
+        "original": "破茧的我会飞向更蔚蓝的明天",
+        "dynamic": {
+          "time": 223797,
+          "words": [
+            {
+              "time": 0,
+              "duration": 396,
+              "text": "破",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 396,
+              "duration": 215,
+              "text": "茧",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 612,
+              "duration": 218,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 830,
+              "duration": 215,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1046,
+              "duration": 217,
+              "text": "会",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1263,
+              "duration": 195,
+              "text": "飞",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1459,
+              "duration": 271,
+              "text": "向",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1731,
+              "duration": 217,
+              "text": "更",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1948,
+              "duration": 316,
+              "text": "蔚",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2264,
+              "duration": 510,
+              "text": "蓝",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2775,
+              "duration": 216,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2992,
+              "duration": 426,
+              "text": "明",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3418,
+              "duration": 1514,
+              "text": "天",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "破茧的我会飞向更蔚蓝的明天"
+      }
+    },
+    {
+      "time": 229990,
+      "duration": 6404,
+      "content": {
+        "original": "前方路若遥远 回头看看从前",
+        "dynamic": {
+          "time": 229990,
+          "words": [
+            {
+              "time": 0,
+              "duration": 198,
+              "text": "前",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 198,
+              "duration": 182,
+              "text": "方",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 380,
+              "duration": 393,
+              "text": "路",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 774,
+              "duration": 489,
+              "text": "若",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1263,
+              "duration": 450,
+              "text": "遥",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1714,
+              "duration": 1414,
+              "text": "远 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": true }
+            },
+            {
+              "time": 3516,
+              "duration": 217,
+              "text": "回",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3734,
+              "duration": 216,
+              "text": "头",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3950,
+              "duration": 432,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4383,
+              "duration": 450,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4834,
+              "duration": 433,
+              "text": "从",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5267,
+              "duration": 1530,
+              "text": "前",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "前方路若遥远  回头看看从前"
+      }
+    },
+    {
+      "time": 236293,
+      "duration": 7252,
+      "content": {
+        "original": "看看镜子里的你带着曾经的我",
+        "dynamic": {
+          "time": 236293,
+          "words": [
+            {
+              "time": 0,
+              "duration": 198,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 199,
+              "duration": 156,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 355,
+              "duration": 295,
+              "text": "镜",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 650,
+              "duration": 531,
+              "text": "子",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1182,
+              "duration": 408,
+              "text": "里",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1590,
+              "duration": 907,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2498,
+              "duration": 604,
+              "text": "你",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3102,
+              "duration": 335,
+              "text": "带",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3438,
+              "duration": 379,
+              "text": "着",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3818,
+              "duration": 483,
+              "text": "曾",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4301,
+              "duration": 495,
+              "text": "经",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4796,
+              "duration": 449,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 5246,
+              "duration": 2012,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": true }
+            }
+          ]
+        },
+        "raw": "看看镜子里的你带着曾经的我"
+      }
+    },
+    {
+      "time": 244266,
+      "duration": 1270,
+      "content": {
+        "original": "已走了多远",
+        "dynamic": {
+          "time": 244266,
+          "words": [
+            {
+              "time": 0,
+              "duration": 180,
+              "text": "已",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 180,
+              "duration": 162,
+              "text": "走",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 342,
+              "duration": 187,
+              "text": "了",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 530,
+              "duration": 181,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 711,
+              "duration": 560,
+              "text": "远",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "已走了多远"
+      }
+    },
+    {
+      "time": 245537,
+      "duration": 3750,
+      "content": {
+        "original": "多少次我心里浮现失控的画面",
+        "dynamic": {
+          "time": 245537,
+          "words": [
+            {
+              "time": 0,
+              "duration": 216,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 217,
+              "duration": 278,
+              "text": "少",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 495,
+              "duration": 171,
+              "text": "次",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 667,
+              "duration": 243,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 911,
+              "duration": 298,
+              "text": "心",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1209,
+              "duration": 286,
+              "text": "里",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1496,
+              "duration": 297,
+              "text": "浮",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1793,
+              "duration": 296,
+              "text": "现",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2090,
+              "duration": 271,
+              "text": "失",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2362,
+              "duration": 269,
+              "text": "控",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2631,
+              "duration": 341,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2973,
+              "duration": 406,
+              "text": "画",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3379,
+              "duration": 378,
+              "text": "面",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "多少次我心里浮现失控的画面"
+      }
+    },
+    {
+      "time": 249548,
+      "duration": 3563,
+      "content": {
+        "original": "多少冷言冷语汹涌地来到耳边",
+        "dynamic": {
+          "time": 249548,
+          "words": [
+            {
+              "time": 0,
+              "duration": 278,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 279,
+              "duration": 253,
+              "text": "少",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 532,
+              "duration": 252,
+              "text": "冷",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 785,
+              "duration": 198,
+              "text": "言",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 983,
+              "duration": 197,
+              "text": "冷",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1180,
+              "duration": 225,
+              "text": "语",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1406,
+              "duration": 242,
+              "text": "汹",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1649,
+              "duration": 235,
+              "text": "涌",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1885,
+              "duration": 233,
+              "text": "地",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2118,
+              "duration": 253,
+              "text": "来",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2372,
+              "duration": 278,
+              "text": "到",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2650,
+              "duration": 388,
+              "text": "耳",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3039,
+              "duration": 531,
+              "text": "边",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "多少冷言冷语汹涌地来到耳边"
+      }
+    },
+    {
+      "time": 253343,
+      "duration": 4521,
+      "content": {
+        "original": "多少夜失眠 你是否也曾度日如年",
+        "dynamic": {
+          "time": 253343,
+          "words": [
+            {
+              "time": 0,
+              "duration": 234,
+              "text": "多",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 234,
+              "duration": 174,
+              "text": "少",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 408,
+              "duration": 197,
+              "text": "夜",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 605,
+              "duration": 197,
+              "text": "失",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 803,
+              "duration": 506,
+              "text": "眠 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": false }
+            },
+            {
+              "time": 1309,
+              "duration": 279,
+              "text": "你",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1588,
+              "duration": 270,
+              "text": "是",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1859,
+              "duration": 216,
+              "text": "否",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2075,
+              "duration": 216,
+              "text": "也",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2292,
+              "duration": 233,
+              "text": "曾",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2525,
+              "duration": 550,
+              "text": "度",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3075,
+              "duration": 533,
+              "text": "日",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3609,
+              "duration": 431,
+              "text": "如",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 4041,
+              "duration": 485,
+              "text": "年",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "多少夜失眠  你是否也曾度日如年"
+      }
+    },
+    {
+      "time": 258870,
+      "duration": 2258,
+      "content": {
+        "original": "差一点沦陷",
+        "dynamic": {
+          "time": 258870,
+          "words": [
+            {
+              "time": 0,
+              "duration": 259,
+              "text": "差",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 259,
+              "duration": 201,
+              "text": "一",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 461,
+              "duration": 745,
+              "text": "点",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1206,
+              "duration": 370,
+              "text": "沦",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1576,
+              "duration": 683,
+              "text": "陷",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "差一点沦陷"
+      }
+    },
+    {
+      "time": 260346,
+      "duration": 3270,
+      "content": {
+        "original": "当我落寞地遥望着再来的春天",
+        "dynamic": {
+          "time": 260346,
+          "words": [
+            {
+              "time": 0,
+              "duration": 317,
+              "text": "当",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 318,
+              "duration": 233,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 551,
+              "duration": 216,
+              "text": "落",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 767,
+              "duration": 217,
+              "text": "寞",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 985,
+              "duration": 216,
+              "text": "地",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1201,
+              "duration": 208,
+              "text": "遥",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1409,
+              "duration": 224,
+              "text": "望",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1634,
+              "duration": 209,
+              "text": "着",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1844,
+              "duration": 233,
+              "text": "再",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2077,
+              "duration": 261,
+              "text": "来",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2338,
+              "duration": 254,
+              "text": "的",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2593,
+              "duration": 366,
+              "text": "春",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2960,
+              "duration": 316,
+              "text": "天",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "当我落寞地遥望着再来的春天"
+      }
+    },
+    {
+      "time": 263863,
+      "duration": 3330,
+      "content": {
+        "original": "当我默默地把眼泪流在心里面",
+        "dynamic": {
+          "time": 263863,
+          "words": [
+            {
+              "time": 0,
+              "duration": 353,
+              "text": "当",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 354,
+              "duration": 235,
+              "text": "我",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 589,
+              "duration": 250,
+              "text": "默",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 840,
+              "duration": 217,
+              "text": "默",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1057,
+              "duration": 197,
+              "text": "地",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1255,
+              "duration": 197,
+              "text": "把",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1453,
+              "duration": 235,
+              "text": "眼",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1688,
+              "duration": 198,
+              "text": "泪",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1886,
+              "duration": 216,
+              "text": "流",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2103,
+              "duration": 233,
+              "text": "在",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2336,
+              "duration": 279,
+              "text": "心",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2616,
+              "duration": 424,
+              "text": "里",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 3040,
+              "duration": 296,
+              "text": "面",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "当我默默地把眼泪流在心里面"
+      }
+    },
+    {
+      "time": 267580,
+      "duration": 3080,
+      "content": {
+        "original": "当一切违愿 抬头看看蓝天",
+        "dynamic": {
+          "time": 267580,
+          "words": [
+            {
+              "time": 0,
+              "duration": 233,
+              "text": "当",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 233,
+              "duration": 209,
+              "text": "一",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 442,
+              "duration": 216,
+              "text": "切",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 659,
+              "duration": 180,
+              "text": "违",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 839,
+              "duration": 216,
+              "text": "愿 ",
+              "config": { "cjk": true, "spaceEnd": true, "trailing": false }
+            },
+            {
+              "time": 1055,
+              "duration": 235,
+              "text": "抬",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1290,
+              "duration": 260,
+              "text": "头",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1551,
+              "duration": 232,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1783,
+              "duration": 254,
+              "text": "看",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2037,
+              "duration": 722,
+              "text": "蓝",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 2760,
+              "duration": 323,
+              "text": "天",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "当一切违愿  抬头看看蓝天"
+      }
+    },
+    {
+      "time": 272584,
+      "duration": 2116,
+      "content": {
+        "original": "没有极限",
+        "dynamic": {
+          "time": 272584,
+          "words": [
+            {
+              "time": 0,
+              "duration": 666,
+              "text": "没",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 667,
+              "duration": 290,
+              "text": "有",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 957,
+              "duration": 475,
+              "text": "极",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            },
+            {
+              "time": 1433,
+              "duration": 685,
+              "text": "限",
+              "config": { "cjk": true, "spaceEnd": false, "trailing": false }
+            }
+          ]
+        },
+        "raw": "没有极限"
+      }
+    }
+  ]
+}

@@ -82,6 +82,7 @@ const DEFAULT_DYNAMIC_CONFIG: DynamicLyricWord['config'] = {
 export class LyricParser {
   private REGEXP = {
     CJK: /([\p{Unified_Ideograph}|\u3040-\u309F|\u30A0-\u30FF])/gu,
+    SPACE_END: /\s$/,
     DYNAMIC_LINE: /^\[((?<min>[0-9]+):)?(?<sec>[0-9]+([\.:]([0-9]+))?)\](?<line>.*)/,
     DYNAMIC_LINE_WORD: /^\<(?<time>[0-9]+),(?<duration>[0-9]+)\>(?<word>[^\<]*)/,
     TIME: /^\[((?<min>[0-9]+):)?(?<sec>[0-9]+([\.:]([0-9]+))?)\]/,
@@ -437,12 +438,9 @@ export class LyricParser {
       const thisLine = processed[i]
       const dynamic = thisLine.content.dynamic?.words || []
       for (let j = 0; j < dynamic.length; j++) {
-        if (dynamic[j]?.text?.match(this.REGEXP.CJK)) {
-          dynamic[j].config.cjk = true
-        }
-        if (dynamic[j]?.text?.match(/\s$/)) {
-          dynamic[j].config.spaceEnd = true
-        }
+        const cjk = !!dynamic[j]?.text?.match(this.REGEXP.CJK)
+        const spaceEnd = !!dynamic[j]?.text?.match(this.REGEXP.SPACE_END)
+        dynamic[j].config = { ...dynamic[j].config, cjk, spaceEnd }
       }
     }
 
@@ -483,7 +481,7 @@ export class LyricParser {
         }
         const target = dynamic[targetIndex]
         if (target.duration >= 1000) {
-          target.config.trailing = true
+          target.config = { ...target.config, trailing: true }
         }
       }
     }
