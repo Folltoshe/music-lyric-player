@@ -14,7 +14,6 @@ interface PureLyricInfo {
     originalLyric?: string
     translatedLyric?: string
     romanLyric?: string
-    rawLyric?: string
   }[]
 }
 interface DynamicLyricWord {
@@ -48,8 +47,6 @@ export interface LyricLine {
     translated?: string
     // 罗马音
     roman?: string
-    // 未同步
-    raw?: string
     // 动态
     dynamic?: {
       time: number
@@ -80,7 +77,7 @@ const DEFAULT_DYNAMIC_CONFIG: DynamicLyricWord['config'] = {
 }
 
 export class LyricParser {
-  private REGEXP = {
+  private readonly REGEXP = {
     CJK: /([\p{Unified_Ideograph}|\u3040-\u309F|\u30A0-\u30FF])/gu,
     SPACE_END: /\s$/,
     DYNAMIC_LINE: /^\[((?<min>[0-9]+):)?(?<sec>[0-9]+([\.:]([0-9]+))?)\](?<line>.*)/,
@@ -245,6 +242,7 @@ export class LyricParser {
 
     return result.sort((a, b) => a.time - b.time)
   }
+
   private processLyric(lyric: LyricLine[]): LyricLine[] {
     if (lyric.length > 0 && lyric[lyric.length - 1].time === 5940000 && lyric[lyric.length - 1].duration === 0) {
       // 纯音乐
@@ -378,11 +376,9 @@ export class LyricParser {
 
     const translatedParsed = attachOriginalLyric(this.parsePureLyric(translated).lyrics)
     const romanParsed = attachOriginalLyric(this.parsePureLyric(roman).lyrics)
-    const rawParsed = attachOriginalLyric(this.parsePureLyric(original).lyrics)
 
     attachLyricToDynamic(translatedParsed, 'translated')
     attachLyricToDynamic(romanParsed, 'roman')
-    attachLyricToDynamic(rawParsed, 'raw')
 
     // 插入空行
     for (let i = 0; i < processed.length; i++) {
@@ -413,7 +409,7 @@ export class LyricParser {
     //同步原文空格到逐字
     for (let i = 0; i < processed.length; i++) {
       const thisLine = processed[i]
-      let raw = thisLine.content.raw?.trim() ?? ''
+      let raw = thisLine.content.original?.trim() ?? ''
       const dynamic = thisLine.content.dynamic?.words || []
 
       for (let j = 0; j < dynamic.length; j++) {
@@ -521,6 +517,7 @@ export class LyricParser {
 
     return { scroll: result.scroll, lyrics: this.processLyric(result.lyrics) }
   }
+
   parseLyric(props: ParseLyricProps): LyricInfo {
     if (props?.dynamic?.trim().length) return this.handleParseDynamicLyric(props)
     else return this.handleParseLyric(props)
