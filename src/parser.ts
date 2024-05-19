@@ -61,6 +61,18 @@ export interface LyricInfo {
   lyrics: LyricLine[]
 }
 
+export const EMPTY_LYRIC_LINE: LyricLine = {
+  time: 0,
+  duration: 0,
+  content: {
+    original: '',
+  },
+}
+export const EMPTY_LYRIC_INFO: LyricInfo = {
+  scroll: false,
+  lyrics: [],
+}
+
 const PURE_MUSIC_LYRIC_LINE = [
   {
     time: 0,
