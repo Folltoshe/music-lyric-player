@@ -191,7 +191,7 @@ export class LyricParser {
         const wordMatches = tmp.match(this.REGEXP.DYNAMIC_LINE_WORD)
         if (!wordMatches) break
 
-        const wordTime = parseInt(wordMatches.groups?.time || '0')
+        const wordTime = timestamp + parseInt(wordMatches.groups?.time || '0')
         const wordDuration = parseInt(wordMatches.groups?.duration || '0')
         const word = wordMatches.groups?.word.trimStart()
 
