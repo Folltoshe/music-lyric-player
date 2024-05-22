@@ -381,32 +381,6 @@ export class LyricParser {
     attachLyricToDynamic(translatedParsed, 'translated')
     attachLyricToDynamic(romanParsed, 'roman')
 
-    // 插入空行
-    for (let i = 0; i < processed.length; i++) {
-      const thisLine = processed[i]
-      const nextLine = processed[i + 1]
-      if (
-        thisLine &&
-        nextLine &&
-        thisLine.content.original.trim().length > 0 &&
-        nextLine.content.original.trim().length > 0 &&
-        thisLine.duration > 0
-      ) {
-        const thisLineEndTime = (thisLine?.content.dynamic?.time || thisLine.time) + thisLine.duration
-        let nextLineStartTime = nextLine.time
-        if (nextLine.content.dynamic?.time && nextLineStartTime > nextLine.content.dynamic?.time) {
-          nextLineStartTime = nextLine.content.dynamic?.time
-        }
-        if (nextLineStartTime - thisLineEndTime >= 5000) {
-          processed.splice(i + 1, 0, {
-            time: thisLineEndTime,
-            duration: nextLineStartTime - thisLineEndTime,
-            content: { original: '' },
-          })
-        }
-      }
-    }
-
     //同步原文空格到逐字
     for (let i = 0; i < processed.length; i++) {
       const thisLine = processed[i]

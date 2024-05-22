@@ -4,25 +4,23 @@ export const handleGetNowTime =
 export const noop = () => {}
 
 export const handleRequestAnimationFrame = (callback: FrameRequestCallback) => {
-  // @ts-expect-error
-  if (globalThis.requestAnimationFrame) return requestAnimationFrame(callback)
+  if (globalThis.requestAnimationFrame) return globalThis.requestAnimationFrame(callback)
 
   globalThis.setTimeout(callback, 0)
   return null
 }
 export const handleCancelAnimationFrame = (id: number) => {
-  // @ts-expect-error
-  if (globalThis.cancelAnimationFrame) return cancelAnimationFrame(id)
+  if (globalThis.cancelAnimationFrame) return globalThis.cancelAnimationFrame(id)
 }
 
 export class TimeoutTools {
-  invokeTime = 0
-  animationFrameId = null as number | null
-  timeoutId = null as number | null
-  callback = null as ((diffTime: number) => void) | null
-  thresholdTime = 200
+  private invokeTime: number = 0
+  private animationFrameId: number | null = null
+  private timeoutId: null | ReturnType<typeof globalThis.setTimeout> = null
+  private callback: ((diff: number) => void) | null = null
+  private thresholdTime: number = 200
 
-  run() {
+  private run() {
     this.animationFrameId = handleRequestAnimationFrame(() => {
       this.animationFrameId = null
       let diff = this.invokeTime - handleGetNowTime()
@@ -31,21 +29,20 @@ export class TimeoutTools {
           this.run()
           return
         }
-        // @ts-expect-error
-        return (this.timeoutId = globalThis.setTimeout(() => {
+        this.timeoutId = globalThis.setTimeout(() => {
           this.timeoutId = null
           this.run()
-        }, diff - this.thresholdTime))
+        }, diff - this.thresholdTime)
+        return
       }
 
-      this.callback!(diff)
+      this.callback && this.callback(diff)
     })
   }
 
   start(callback = noop, timeout = 0) {
     this.callback = callback
     this.invokeTime = handleGetNowTime() + timeout
-
     this.run()
   }
 
