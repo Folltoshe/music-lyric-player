@@ -106,9 +106,28 @@ const player = new LyricPlayer({
   onSetLyric(info) {
     console.log('onSetLyric', info)
   },
-  onPlay(line, info) {
-    console.log('onPlay', line, info)
+  onLinePlay(line, info) {
+    console.log('onLinePlay', line, info)
+  },
+  onFontPlay(fontNum, info) {
+    // console.log('onFontPlay', fontNum, info)
   },
 })
 
-player.play()
+const result: any[] = []
+lyricInfo.lyrics.forEach((item, index) => {
+  result[index] = item.content.dynamic?.words.map(item => {
+    return {
+      play(duration: number) {
+        console.log(duration, item.text)
+      },
+      pause() {},
+      finish() {},
+      reset() {},
+    }
+  })
+})
+
+player.setDynamicFontsRef(result)
+
+player.play(267580)

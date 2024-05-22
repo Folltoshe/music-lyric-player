@@ -1,13 +1,25 @@
-import type { LyricInfo, LyricLine } from './parser'
+import { type LyricInfo, type LyricLine, type DynamicFontInfo, EMPTY_LYRIC_INFO } from './parser'
 import { TimeoutTools, handleGetNowTime, noop } from './utils'
 
+export interface DynamicFontElementRef {
+  play: (duration: number) => void
+  pause: () => void
+  reset: () => void
+}
 export interface Options {
   /**
-   * Listening play event
+   * Listening lyric line play event
    * @param line line number of current play
    * @param info line info
    */
-  onPlay?: (line: number, info: LyricLine) => void
+  onLinePlay?: (lineNum: number, info: LyricLine) => void
+
+  /**
+   * Listening lyric font play event
+   * @param fontNum font number of current play
+   * @param info font info
+   */
+  onFontPlay?: (fontNum: number, info: DynamicFontInfo) => void
 
   /**
    * listening lyrics seting event
@@ -26,163 +38,279 @@ export interface Options {
   playbackRate?: number
 
   /**
-   * has remove blank line, default is true
-   */
-  isRemoveBlankLine?: boolean
-
-  /**
-   * lyric file text
+   * lyric info
    */
   lyricInfo?: LyricInfo
 }
 type NonNullableOptions = Required<Options>
 
-const timeoutTools = new TimeoutTools()
-
 export class LyricPlayer {
-  private lyricInfo: LyricInfo
-  private lyricEvents: {
-    onPlay: NonNullableOptions['onPlay']
+  private tools: {
+    lineTimeout: TimeoutTools
+    fontTimeout: TimeoutTools
+    waitPlayTimeout: TimeoutTools
+  }
+  private events: {
+    onLinePlay: NonNullableOptions['onLinePlay']
+    onFontPlay: NonNullableOptions['onFontPlay']
     onSetLyric: NonNullableOptions['onSetLyric']
   }
-  private lyricConfig: {
+  private config: {
     offset: NonNullableOptions['offset']
     playbackRate: NonNullableOptions['playbackRate']
-    isRemoveBlankLine: NonNullableOptions['isRemoveBlankLine']
   }
-  private currentInfo: {
+
+  private currentStatus: {
     playing: boolean
-    lineNum: number
-    maxLineNum: number
     startTime: number
     performanceTime: number
   }
 
+  private currentLyricInfo: LyricInfo
+  private currentLineInfo: {
+    num: number
+    max: number
+  }
+  private currentFontInfo: {
+    fonts: DynamicFontInfo[]
+    refs: Array<DynamicFontElementRef[]>
+    num: number
+    max: number
+  }
+
   constructor({
-    lyricInfo = { scroll: false, lyrics: [] },
+    lyricInfo = EMPTY_LYRIC_INFO,
     offset = 150,
     playbackRate = 1,
-    onPlay = noop,
+    onLinePlay = noop,
+    onFontPlay = noop,
     onSetLyric = noop,
-    isRemoveBlankLine = true,
   }: Options) {
-    this.lyricInfo = lyricInfo
-
-    this.lyricConfig = {
-      offset,
-      isRemoveBlankLine,
-      playbackRate,
+    this.tools = {
+      lineTimeout: new TimeoutTools(),
+      fontTimeout: new TimeoutTools(),
+      waitPlayTimeout: new TimeoutTools(),
     }
+    this.config = { offset, playbackRate }
+    this.events = { onLinePlay, onFontPlay, onSetLyric }
 
-    this.lyricEvents = {
-      onPlay,
-      onSetLyric,
-    }
-
-    this.currentInfo = {
+    this.currentStatus = {
       playing: false,
-      lineNum: 0,
-      maxLineNum: 0,
       performanceTime: 0,
       startTime: 0,
+    }
+
+    this.currentLyricInfo = lyricInfo
+    this.currentLineInfo = {
+      num: 0,
+      max: 0,
+    }
+    this.currentFontInfo = {
+      fonts: [],
+      refs: [],
+      num: 0,
+      max: 0,
     }
 
     this.init()
   }
 
   private init() {
-    this.lyricEvents.onSetLyric(this.lyricInfo)
-    this.currentInfo.maxLineNum = this.lyricInfo.lyrics.length - 1
+    this.events.onSetLyric(this.currentLyricInfo)
+    this.currentLineInfo.max = this.currentLyricInfo.lyrics.length - 1
   }
 
   private handleGetCurrentTime() {
     return (
-      (handleGetNowTime() - this.currentInfo.performanceTime) * this.lyricConfig.playbackRate +
-      this.currentInfo.startTime
+      (handleGetNowTime() - this.currentStatus.performanceTime) * this.config.playbackRate +
+      this.currentStatus.startTime
     )
   }
 
-  private handleFindCurrentLineNum(time: number, startIndex = 0) {
+  private handleGetFontRef(line: number, index: number) {
+    const currentLine = this.currentFontInfo.refs[line]
+    if (!currentLine) return null
+    return currentLine[index]
+  }
+  private handleUpdateFontInfo() {
+    this.currentFontInfo.fonts = this.currentLyricInfo.lyrics[this.currentLineInfo.num].content.dynamic?.words || []
+    this.currentFontInfo.max = this.currentFontInfo.fonts.length - 1
+    this.currentFontInfo.num = 0
+  }
+
+  private handleFindCurrentLine(time: number, start = 0) {
     if (time <= 0) return 0
-    const length = this.lyricInfo.lyrics.length
-    for (let index = startIndex; index < length; index++)
-      if (time <= this.lyricInfo.lyrics[index].time) return index === 0 ? 0 : index - 1
+    const length = this.currentLyricInfo.lyrics.length
+    for (let index = start; index < length; index++) {
+      if (time <= this.currentLyricInfo.lyrics[index].time) return index === 0 ? 0 : index - 1
+    }
+    return length - 1
+  }
+  private handleFindCurrentFont(time: number, start = 0) {
+    const length = this.currentFontInfo.fonts.length
+    for (let index = start; index < length; index++) {
+      if (time < this.currentFontInfo.fonts[index].time) return index == 0 ? 0 : index - 1
+    }
     return length - 1
   }
 
   private handlePlayMaxLine() {
-    this.lyricEvents.onPlay(this.currentInfo.lineNum, this.lyricInfo.lyrics[this.currentInfo.lineNum])
-    this.pause()
+    const currentLine = this.currentLyricInfo.lyrics[this.currentLineInfo.num]
+
+    this.events.onLinePlay(this.currentLineInfo.num, currentLine)
+    if (currentLine.duration > 0) {
+      this.tools.lineTimeout.start(() => this.pause(), currentLine.duration)
+      this.handleUpdateFontInfo()
+      this.handleFontRefresh()
+    } else this.pause()
+  }
+  private handlePlayMaxFont() {
+    const currentFont = this.currentFontInfo.fonts[this.currentFontInfo.num]
+    this.events.onFontPlay(this.currentFontInfo.num, currentFont)
+    this.handleGetFontRef(this.currentLineInfo.num, this.currentFontInfo.num)?.play(currentFont.duration)
+    this.handleFontPause()
   }
 
-  private refresh() {
-    this.currentInfo.lineNum++
-    if (this.currentInfo.lineNum >= this.currentInfo.maxLineNum) {
+  private handleLineRefresh() {
+    this.currentLineInfo.num++
+    if (this.currentLineInfo.num >= this.currentLineInfo.max) {
       this.handlePlayMaxLine()
       return
     }
 
-    const currentLine = this.lyricInfo.lyrics[this.currentInfo.lineNum]
+    const currentLine = this.currentLyricInfo.lyrics[this.currentLineInfo.num]
     const currentTime = this.handleGetCurrentTime()
 
     const driftTime = currentTime - currentLine.time
 
-    if (driftTime >= 0 || this.currentInfo.lineNum === 0) {
-      let nextLine = this.lyricInfo.lyrics[this.currentInfo.lineNum + 1]
-      const delay = (nextLine.time - currentLine.time - driftTime) / this.lyricConfig.playbackRate
+    if (driftTime >= 0 || this.currentLineInfo.num === 0) {
+      const nextLine = this.currentLyricInfo.lyrics[this.currentLineInfo.num + 1]
+      const delay = (nextLine.time - currentLine.time - driftTime) / this.config.playbackRate
 
       if (delay > 0) {
-        if (this.currentInfo.playing) {
-          timeoutTools.start(() => {
-            if (!this.currentInfo.playing) return
-            this.refresh()
+        if (this.currentStatus.playing) {
+          this.tools.lineTimeout.start(() => {
+            if (!this.currentStatus.playing) return
+            this.handleLineRefresh()
           }, delay)
         }
-        this.lyricEvents.onPlay(this.currentInfo.lineNum, currentLine)
+
+        this.events.onLinePlay(this.currentLineInfo.num, currentLine)
+
+        this.handleUpdateFontInfo()
+        this.handleFontRefresh()
       } else {
-        const newCurLineNum = this.handleFindCurrentLineNum(currentTime, this.currentInfo.lineNum + 1)
-        if (newCurLineNum > this.currentInfo.lineNum) this.currentInfo.lineNum = newCurLineNum - 1
-        this.refresh()
+        const newCurLineNum = this.handleFindCurrentLine(currentTime, this.currentLineInfo.num + 1)
+        if (newCurLineNum > this.currentLineInfo.num) this.currentLineInfo.num = newCurLineNum - 1
+        this.handleLineRefresh()
       }
 
       return
     }
 
-    this.currentInfo.lineNum = this.handleFindCurrentLineNum(currentTime, this.currentInfo.lineNum) - 1
-    this.refresh()
+    this.currentLineInfo.num = this.handleFindCurrentLine(currentTime, this.currentLineInfo.num) - 1
+    this.handleLineRefresh()
+  }
+  private handleFontRefresh() {
+    this.currentFontInfo.num++
+    if (this.currentFontInfo.num >= this.currentFontInfo.max) {
+      this.handlePlayMaxFont()
+      return
+    }
+
+    const currentFont = this.currentFontInfo.fonts[this.currentFontInfo.num]
+    const currentTime = this.handleGetCurrentTime()
+    const driftTime = currentTime - currentFont.time
+
+    if (driftTime >= 0 || this.currentFontInfo.num == 0) {
+      const nextFont = this.currentFontInfo.fonts[this.currentFontInfo.num + 1]
+      const delay = (nextFont.time - currentFont.time - driftTime) / this.config.playbackRate
+
+      if (delay > 0) {
+        if (this.currentStatus.playing) {
+          this.tools.fontTimeout.start(() => {
+            if (!this.currentStatus.playing) return
+            this.handleFontRefresh()
+          }, delay)
+        }
+
+        this.events.onFontPlay(this.currentFontInfo.num, currentFont)
+        this.handleGetFontRef(this.currentLineInfo.num, this.currentFontInfo.num)?.play(currentFont.duration)
+      } else {
+        const newCurrentFont = this.handleFindCurrentFont(currentTime, this.currentFontInfo.num + 1)
+        if (newCurrentFont > this.currentFontInfo.num) this.currentFontInfo.num = newCurrentFont - 1
+        for (let i = 0; i <= this.currentFontInfo.num; i++) this.handleGetFontRef(this.currentLineInfo.num, i)?.play(0)
+        this.handleFontRefresh()
+      }
+
+      return
+    } else if (this.currentFontInfo.num == 0) {
+      this.currentFontInfo.num--
+      if (this.currentStatus.playing) {
+        this.tools.waitPlayTimeout.start(() => {
+          if (!this.currentStatus.playing) return
+          this.handleFontRefresh()
+        }, -driftTime)
+      }
+
+      return
+    }
+
+    this.currentFontInfo.num = this.handleFindCurrentFont(currentTime, this.currentFontInfo.num) - 1
+    for (let i = 0; i <= this.currentFontInfo.num; i++) this.handleGetFontRef(this.currentLineInfo.num, i)?.play(0)
+    this.handleFontRefresh()
+  }
+
+  private handleLinePause() {
+    if (!this.currentStatus.playing) return
+    this.currentStatus.playing = false
+    this.tools.lineTimeout.clear()
+
+    if (this.currentLineInfo.num === this.currentLineInfo.max) return
+
+    const currentLineNum = this.handleFindCurrentLine(this.handleGetCurrentTime())
+    if (this.currentLineInfo.num !== currentLineNum) {
+      this.currentLineInfo.num = currentLineNum
+      this.events.onLinePlay(currentLineNum, this.currentLyricInfo.lyrics[currentLineNum])
+    }
+  }
+  private handleFontPause() {
+    if (!this.currentStatus.playing) return
+
+    this.tools.fontTimeout.clear()
+    this.tools.waitPlayTimeout.clear()
+
+    this.handleGetFontRef(this.currentLineInfo.num, this.currentFontInfo.num)?.pause()
+
+    if (this.currentFontInfo.num === this.currentFontInfo.max) return
+    const currentFontNum = this.handleFindCurrentFont(this.handleGetCurrentTime())
+    if (this.currentFontInfo.num === currentFontNum) return
+    for (let i = 0; i < this.currentFontInfo.num; i++) this.handleGetFontRef(this.currentLineInfo.num, i)?.play(0)
   }
 
   /**
    * Play lyric
-   * @param time play time, unit: ms
+   * @param currentTime play time, unit: ms
    */
-  play(curTime = 0) {
-    if (!this.lyricInfo.lyrics.length) return
+  play(currentTime = 0) {
+    if (!this.currentLyricInfo.lyrics.length) return
 
     this.pause()
-    this.currentInfo.playing = true
 
-    this.currentInfo.performanceTime = handleGetNowTime() - Math.trunc(this.lyricConfig.offset)
-    this.currentInfo.startTime = curTime
+    this.currentStatus.playing = true
+    this.currentStatus.performanceTime = handleGetNowTime() - Math.trunc(this.config.offset)
+    this.currentStatus.startTime = currentTime
 
-    this.currentInfo.lineNum = this.handleFindCurrentLineNum(this.handleGetCurrentTime()) - 1
-
-    this.refresh()
+    this.currentLineInfo.num = this.handleFindCurrentLine(this.handleGetCurrentTime()) - 1
+    this.handleLineRefresh()
   }
 
   /**
    * Pause lyric
    */
   pause() {
-    if (!this.currentInfo.playing) return
-    this.currentInfo.playing = false
-    timeoutTools.clear()
-    if (this.currentInfo.lineNum === this.currentInfo.maxLineNum) return
-    const curLineNum = this.handleFindCurrentLineNum(this.handleGetCurrentTime())
-    if (this.currentInfo.lineNum !== curLineNum) {
-      this.currentInfo.lineNum = curLineNum
-      this.lyricEvents.onPlay(curLineNum, this.lyricInfo.lyrics[curLineNum])
-    }
+    this.handleFontPause()
+    this.handleLinePause()
   }
 
   /**
@@ -190,20 +318,23 @@ export class LyricPlayer {
    * @param playbackRate playback rate
    */
   setPlaybackRate(playbackRate: NonNullableOptions['playbackRate']) {
-    this.lyricConfig.playbackRate = playbackRate
-    if (!this.lyricInfo.lyrics.length) return
-    if (!this.currentInfo.playing) return
+    this.config.playbackRate = playbackRate
+    if (!this.currentLyricInfo.lyrics.length) return
+    if (!this.currentStatus.playing) return
     this.play(this.handleGetCurrentTime())
   }
 
   /**
    * Set lyric
-   * @param lyricStr lyric file text
-   * @param extendedLyricStrs extended lyric file text array, for example lyric translations
+   * @param lyricInfo lyric info
    */
   setLyric(lyricInfo: LyricInfo) {
-    if (this.currentInfo.playing) this.pause()
-    this.lyricInfo = lyricInfo
+    if (this.currentStatus.playing) this.pause()
+    this.currentLyricInfo = lyricInfo
     this.init()
+  }
+
+  setDynamicFontsRef(refs: typeof this.currentFontInfo.refs) {
+    this.currentFontInfo.refs = refs
   }
 }

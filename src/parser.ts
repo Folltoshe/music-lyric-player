@@ -16,7 +16,8 @@ interface PureLyricInfo {
     romanLyric?: string
   }[]
 }
-interface DynamicLyricWord {
+
+export interface DynamicFontInfo {
   // 时间
   time: number
   // 时长
@@ -50,7 +51,7 @@ export interface LyricLine {
     // 动态
     dynamic?: {
       time: number
-      words: DynamicLyricWord[]
+      words: DynamicFontInfo[]
     }
   }
 }
@@ -59,18 +60,6 @@ export interface LyricInfo {
   scroll: boolean
   // 歌词内容
   lyrics: LyricLine[]
-}
-
-export const EMPTY_LYRIC_LINE: LyricLine = {
-  time: 0,
-  duration: 0,
-  content: {
-    original: '',
-  },
-}
-export const EMPTY_LYRIC_INFO: LyricInfo = {
-  scroll: false,
-  lyrics: [],
 }
 
 const PURE_MUSIC_LYRIC_LINE = [
@@ -82,7 +71,7 @@ const PURE_MUSIC_LYRIC_LINE = [
     },
   },
 ]
-const DEFAULT_DYNAMIC_CONFIG: DynamicLyricWord['config'] = {
+const DYNAMIC_FONT_CONFIG: DynamicFontInfo['config'] = {
   cjk: false,
   spaceEnd: false,
   trailing: false,
@@ -185,7 +174,7 @@ export class LyricParser {
 
       tmp = lineMatches.groups?.line || ''
       const timestamp = this.handleParseLyricTime(lineMatches.groups?.min || '0', lineMatches.groups?.sec || '0')
-      const words: DynamicLyricWord[] = []
+      const words: DynamicFontInfo[] = []
 
       while (tmp.length > 0) {
         const wordMatches = tmp.match(this.REGEXP.DYNAMIC_LINE_WORD)
@@ -205,14 +194,14 @@ export class LyricParser {
                   time: wordTime + i * splitedDuration,
                   duration: splitedDuration,
                   text: `${subWord.trimStart()} `,
-                  config: DEFAULT_DYNAMIC_CONFIG,
+                  config: DYNAMIC_FONT_CONFIG,
                 })
               } else {
                 words.push({
                   time: wordTime + i * splitedDuration,
                   duration: splitedDuration,
                   text: subWord.trimStart(),
-                  config: DEFAULT_DYNAMIC_CONFIG,
+                  config: DYNAMIC_FONT_CONFIG,
                 })
               }
             } else if (i === 0) {
@@ -221,14 +210,14 @@ export class LyricParser {
                   time: wordTime + i * splitedDuration,
                   duration: splitedDuration,
                   text: ` ${subWord.trimStart()}`,
-                  config: DEFAULT_DYNAMIC_CONFIG,
+                  config: DYNAMIC_FONT_CONFIG,
                 })
               } else {
                 words.push({
                   time: wordTime + i * splitedDuration,
                   duration: splitedDuration,
                   text: subWord.trimStart(),
-                  config: DEFAULT_DYNAMIC_CONFIG,
+                  config: DYNAMIC_FONT_CONFIG,
                 })
               }
             } else {
@@ -236,7 +225,7 @@ export class LyricParser {
                 time: wordTime + i * splitedDuration,
                 duration: splitedDuration,
                 text: `${subWord.trimStart()} `,
-                config: DEFAULT_DYNAMIC_CONFIG,
+                config: DYNAMIC_FONT_CONFIG,
               })
             }
           })
@@ -534,4 +523,22 @@ export class LyricParser {
     if (props?.dynamic?.trim().length) return this.handleParseDynamicLyric(props)
     else return this.handleParseLyric(props)
   }
+}
+
+export const EMPTY_DYNAMIC_WORD: DynamicFontInfo = {
+  time: 0,
+  duration: 0,
+  text: '',
+  config: DYNAMIC_FONT_CONFIG,
+}
+export const EMPTY_LYRIC_LINE: LyricLine = {
+  time: 0,
+  duration: 0,
+  content: {
+    original: '',
+  },
+}
+export const EMPTY_LYRIC_INFO: LyricInfo = {
+  scroll: false,
+  lyrics: [],
 }
