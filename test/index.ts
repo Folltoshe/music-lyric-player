@@ -1,4 +1,4 @@
-import { LyricParser, LyricPlayer } from '../src'
+import { LyricParser, LyricPlayer, type DynamicFontElementRef } from '../src'
 
 const parser = new LyricParser()
 
@@ -106,28 +106,30 @@ const player = new LyricPlayer({
   onSetLyric(info) {
     console.log('onSetLyric', info)
   },
-  onLinePlay(line, info) {
-    console.log('onLinePlay', line, info)
+  onLinePlay(lineNum, info) {
+    console.log('onLinePlay', lineNum, info)
   },
   onFontPlay(fontNum, info) {
-    // console.log('onFontPlay', fontNum, info)
+    console.log('onFontPlay', fontNum, info)
   },
 })
 
-const result: any[] = []
+const result: Array<DynamicFontElementRef[]> = []
 lyricInfo.lyrics.forEach((item, index) => {
-  result[index] = item.content.dynamic?.words.map(item => {
-    return {
-      play(duration: number) {
-        console.log(duration, item.text)
-      },
-      pause() {},
-      finish() {},
-      reset() {},
-    }
-  })
+  result[index] =
+    item.content.dynamic?.words.map(item => {
+      return {
+        play(duration: number) {
+          console.log(duration, item.text)
+        },
+        pause() {},
+        reset() {},
+      }
+    }) || []
 })
 
+// set ref
 player.setDynamicFontsRef(result)
 
-player.play(267580)
+// play
+player.play()

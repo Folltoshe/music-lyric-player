@@ -1,4 +1,4 @@
-import { type LyricInfo, type LyricLine, type DynamicFontInfo, EMPTY_LYRIC_INFO } from './parser'
+import { EMPTY_LYRIC_INFO, type LyricInfo, type LyricLine, type DynamicFontInfo } from './parser'
 import { TimeoutTools, handleGetNowTime, noop } from './utils'
 
 export interface DynamicFontElementRef {
@@ -314,6 +314,14 @@ export class LyricPlayer {
   }
 
   /**
+   * Set dynamic fonts reference
+   * @param refs dynamic fonts reference
+   */
+  setDynamicFontsRef(refs: typeof this.currentFontInfo.refs) {
+    this.currentFontInfo.refs = refs
+  }
+
+  /**
    * Set playback rate
    * @param playbackRate playback rate
    */
@@ -325,6 +333,14 @@ export class LyricPlayer {
   }
 
   /**
+   * Set offset
+   * @param offset offset
+   */
+  setOffset(offset: NonNullableOptions['offset']) {
+    this.config.offset = offset
+  }
+
+  /**
    * Set lyric
    * @param lyricInfo lyric info
    */
@@ -332,9 +348,5 @@ export class LyricPlayer {
     if (this.currentStatus.playing) this.pause()
     this.currentLyricInfo = lyricInfo
     this.init()
-  }
-
-  setDynamicFontsRef(refs: typeof this.currentFontInfo.refs) {
-    this.currentFontInfo.refs = refs
   }
 }
