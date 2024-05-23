@@ -1,4 +1,4 @@
-import { LyricParser, LyricPlayer, type DynamicFontElementRef } from '../src'
+import { LyricParser, LyricPlayer, type LineElementRef } from '../src'
 
 const parser = new LyricParser()
 
@@ -114,22 +114,19 @@ const player = new LyricPlayer({
   },
 })
 
-const result: Array<DynamicFontElementRef[]> = []
-lyricInfo.lyrics.forEach((item, index) => {
-  result[index] =
-    item.content.dynamic?.words.map(item => {
-      return {
-        play(duration: number) {
-          console.log(duration, item.text)
-        },
-        pause() {},
-        reset() {},
-      }
-    }) || []
+const lineRefs: LineElementRef[] = lyricInfo.lyrics.map(item => {
+  return {
+    handleFontAction(action, params) {
+      console.log('handleFontAction', action, params)
+    },
+    handleLineAction(action, params) {
+      console.log('handleLineAction', action, params)
+    },
+  }
 })
 
 // set ref
-player.setDynamicFontsRef(result)
+player.updateLineRefs(lineRefs)
 
 // play
-player.play()
+player.play(14381)

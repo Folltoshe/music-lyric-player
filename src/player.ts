@@ -1,12 +1,22 @@
 import { EMPTY_LYRIC_INFO, type LyricInfo, type LyricLine, type DynamicFontInfo } from './parser'
 import { TimeoutTools, handleGetNowTime, noop } from './utils'
 
-export interface DynamicFontElementRef {
-  play: (duration: number) => void
-  pause: () => void
-  reset: () => void
+export interface LineActionParams {
+  play: { time: number; duration: number; num: number }
+  pause: {}
+  reset: {}
 }
-export interface Options {
+export interface DynamicFontActionParams {
+  play: { time: number; duration: number; num: number }
+  pause: { num: number }
+  reset: { num: number }
+}
+export interface LineElementRef {
+  handleLineAction: <K extends keyof LineActionParams>(action: K, params: LineActionParams[K]) => void
+  handleFontAction: <K extends keyof DynamicFontActionParams>(action: K, params: DynamicFontActionParams[K]) => void
+}
+
+export interface PlayerOptions {
   /**
    * Listening lyric line play event
    * @param line line number of current play
@@ -42,7 +52,7 @@ export interface Options {
    */
   lyricInfo?: LyricInfo
 }
-type NonNullableOptions = Required<Options>
+export type RequiredPlayerOptions = Required<PlayerOptions>
 
 export class LyricPlayer {
   private tools: {
@@ -51,13 +61,13 @@ export class LyricPlayer {
     waitPlayTimeout: TimeoutTools
   }
   private events: {
-    onLinePlay: NonNullableOptions['onLinePlay']
-    onFontPlay: NonNullableOptions['onFontPlay']
-    onSetLyric: NonNullableOptions['onSetLyric']
+    onLinePlay: RequiredPlayerOptions['onLinePlay']
+    onFontPlay: RequiredPlayerOptions['onFontPlay']
+    onSetLyric: RequiredPlayerOptions['onSetLyric']
   }
   private config: {
-    offset: NonNullableOptions['offset']
-    playbackRate: NonNullableOptions['playbackRate']
+    offset: RequiredPlayerOptions['offset']
+    playbackRate: RequiredPlayerOptions['playbackRate']
   }
 
   private currentStatus: {
@@ -67,13 +77,13 @@ export class LyricPlayer {
   }
 
   private currentLyricInfo: LyricInfo
+  private currentLineRefs: LineElementRef[]
   private currentLineInfo: {
     num: number
     max: number
   }
   private currentFontInfo: {
     fonts: DynamicFontInfo[]
-    refs: Array<DynamicFontElementRef[]>
     num: number
     max: number
   }
@@ -85,7 +95,7 @@ export class LyricPlayer {
     onLinePlay = noop,
     onFontPlay = noop,
     onSetLyric = noop,
-  }: Options) {
+  }: PlayerOptions) {
     this.tools = {
       lineTimeout: new TimeoutTools(),
       fontTimeout: new TimeoutTools(),
@@ -101,21 +111,21 @@ export class LyricPlayer {
     }
 
     this.currentLyricInfo = lyricInfo
+    this.currentLineRefs = []
     this.currentLineInfo = {
       num: 0,
       max: 0,
     }
     this.currentFontInfo = {
       fonts: [],
-      refs: [],
       num: 0,
       max: 0,
     }
 
-    this.init()
+    this.handleUpdateLyric()
   }
 
-  private init() {
+  private handleUpdateLyric() {
     this.events.onSetLyric(this.currentLyricInfo)
     this.currentLineInfo.max = this.currentLyricInfo.lyrics.length - 1
   }
@@ -127,11 +137,23 @@ export class LyricPlayer {
     )
   }
 
-  private handleGetFontRef(line: number, index: number) {
-    const currentLine = this.currentFontInfo.refs[line]
-    if (!currentLine) return null
-    return currentLine[index]
+  private handleSendLineAction<K extends keyof LineActionParams>(
+    lineNum: number,
+    action: K,
+    params: LineActionParams[K]
+  ) {
+    const line = this.currentLineRefs[lineNum]
+    line && line.handleLineAction(action, params)
   }
+  private handleSendFontAction<K extends keyof LineActionParams>(
+    lineNum: number,
+    action: K,
+    params: DynamicFontActionParams[K]
+  ) {
+    const line = this.currentLineRefs[lineNum]
+    line && line.handleFontAction(action, params)
+  }
+
   private handleUpdateFontInfo() {
     this.currentFontInfo.fonts = this.currentLyricInfo.lyrics[this.currentLineInfo.num].content.dynamic?.words || []
     this.currentFontInfo.max = this.currentFontInfo.fonts.length - 1
@@ -167,7 +189,11 @@ export class LyricPlayer {
   private handlePlayMaxFont() {
     const currentFont = this.currentFontInfo.fonts[this.currentFontInfo.num]
     this.events.onFontPlay(this.currentFontInfo.num, currentFont)
-    this.handleGetFontRef(this.currentLineInfo.num, this.currentFontInfo.num)?.play(currentFont.duration)
+    this.handleSendFontAction(this.currentLineInfo.num, 'play', {
+      time: currentFont.time,
+      duration: currentFont.duration,
+      num: this.currentFontInfo.num,
+    })
     this.handleFontPause()
   }
 
@@ -212,6 +238,8 @@ export class LyricPlayer {
     this.handleLineRefresh()
   }
   private handleFontRefresh() {
+    if (!this.currentFontInfo.fonts.length) return
+
     this.currentFontInfo.num++
     if (this.currentFontInfo.num >= this.currentFontInfo.max) {
       this.handlePlayMaxFont()
@@ -235,11 +263,17 @@ export class LyricPlayer {
         }
 
         this.events.onFontPlay(this.currentFontInfo.num, currentFont)
-        this.handleGetFontRef(this.currentLineInfo.num, this.currentFontInfo.num)?.play(currentFont.duration)
+        this.handleSendFontAction(this.currentLineInfo.num, 'play', {
+          time: currentFont.time,
+          duration: currentFont.duration,
+          num: this.currentFontInfo.num,
+        })
       } else {
         const newCurrentFont = this.handleFindCurrentFont(currentTime, this.currentFontInfo.num + 1)
         if (newCurrentFont > this.currentFontInfo.num) this.currentFontInfo.num = newCurrentFont - 1
-        for (let i = 0; i <= this.currentFontInfo.num; i++) this.handleGetFontRef(this.currentLineInfo.num, i)?.play(0)
+        for (let i = 0; i <= this.currentFontInfo.num; i++) {
+          this.handleSendFontAction(this.currentLineInfo.num, 'play', { time: 0, duration: 0, num: i })
+        }
         this.handleFontRefresh()
       }
 
@@ -257,7 +291,9 @@ export class LyricPlayer {
     }
 
     this.currentFontInfo.num = this.handleFindCurrentFont(currentTime, this.currentFontInfo.num) - 1
-    for (let i = 0; i <= this.currentFontInfo.num; i++) this.handleGetFontRef(this.currentLineInfo.num, i)?.play(0)
+    for (let i = 0; i <= this.currentFontInfo.num; i++) {
+      this.handleSendFontAction(this.currentLineInfo.num, 'play', { time: 0, duration: 0, num: i })
+    }
     this.handleFontRefresh()
   }
 
@@ -280,12 +316,14 @@ export class LyricPlayer {
     this.tools.fontTimeout.clear()
     this.tools.waitPlayTimeout.clear()
 
-    this.handleGetFontRef(this.currentLineInfo.num, this.currentFontInfo.num)?.pause()
+    this.handleSendFontAction(this.currentLineInfo.num, 'pause', { num: this.currentFontInfo.num })
 
     if (this.currentFontInfo.num === this.currentFontInfo.max) return
     const currentFontNum = this.handleFindCurrentFont(this.handleGetCurrentTime())
     if (this.currentFontInfo.num === currentFontNum) return
-    for (let i = 0; i < this.currentFontInfo.num; i++) this.handleGetFontRef(this.currentLineInfo.num, i)?.play(0)
+    for (let i = 0; i < this.currentFontInfo.num; i++) {
+      this.handleSendFontAction(this.currentLineInfo.num, 'play', { time: 0, duration: 0, num: i })
+    }
   }
 
   /**
@@ -314,18 +352,18 @@ export class LyricPlayer {
   }
 
   /**
-   * Set dynamic fonts reference
-   * @param refs dynamic fonts reference
+   * Update line reference
+   * @param refs line reference
    */
-  setDynamicFontsRef(refs: typeof this.currentFontInfo.refs) {
-    this.currentFontInfo.refs = refs
+  updateLineRefs(refs: LineElementRef[]) {
+    this.currentLineRefs = refs
   }
 
   /**
-   * Set playback rate
+   * Update playback rate
    * @param playbackRate playback rate
    */
-  setPlaybackRate(playbackRate: NonNullableOptions['playbackRate']) {
+  updatePlaybackRate(playbackRate: RequiredPlayerOptions['playbackRate']) {
     this.config.playbackRate = playbackRate
     if (!this.currentLyricInfo.lyrics.length) return
     if (!this.currentStatus.playing) return
@@ -333,20 +371,20 @@ export class LyricPlayer {
   }
 
   /**
-   * Set offset
+   * Update offset
    * @param offset offset
    */
-  setOffset(offset: NonNullableOptions['offset']) {
+  updateOffset(offset: RequiredPlayerOptions['offset']) {
     this.config.offset = offset
   }
 
   /**
-   * Set lyric
+   * Update lyric
    * @param lyricInfo lyric info
    */
-  setLyric(lyricInfo: LyricInfo) {
+  updateLyric(lyricInfo: LyricInfo) {
     if (this.currentStatus.playing) this.pause()
     this.currentLyricInfo = lyricInfo
-    this.init()
+    this.handleUpdateLyric()
   }
 }
