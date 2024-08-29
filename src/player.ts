@@ -188,13 +188,16 @@ export class LyricPlayer {
   }
   private handlePlayMaxFont() {
     const currentFont = this.currentFontInfo.fonts[this.currentFontInfo.num]
+    if (!currentFont) {
+      this.handleFontPause()
+      return
+    }
     this.events.onFontPlay(this.currentFontInfo.num, currentFont)
     this.handleSendFontAction(this.currentLineInfo.num, 'play', {
       time: currentFont.time,
       duration: currentFont.duration,
       num: this.currentFontInfo.num,
     })
-    this.handleFontPause()
   }
 
   private handleLineRefresh() {
