@@ -114,19 +114,5 @@ const player = new LyricPlayer({
   },
 })
 
-const lineRefs: LineElementRef[] = lyricInfo.lyrics.map(item => {
-  return {
-    handleFontAction(action, params) {
-      console.log('handleFontAction', action, params)
-    },
-    handleLineAction(action, params) {
-      console.log('handleLineAction', action, params)
-    },
-  }
-})
-
-// set ref
-player.updateLineRefs(lineRefs)
-
 // play
-player.play(14381)
+player.play(0)

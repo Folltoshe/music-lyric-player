@@ -54,6 +54,11 @@ export interface LyricLine {
       words: DynamicFontInfo[]
     }
   }
+  // 配置
+  config: {
+    // 是否为间奏
+    isInterlude: boolean
+  }
 }
 export interface LyricInfo {
   // 是否可以滚动
@@ -62,12 +67,15 @@ export interface LyricInfo {
   lyrics: LyricLine[]
 }
 
-const PURE_MUSIC_LYRIC_LINE = [
+const PURE_MUSIC_LYRIC_LINE: LyricLine[] = [
   {
     time: 0,
     duration: 5940000,
     content: {
       original: '纯音乐，请欣赏',
+    },
+    config: {
+      isInterlude: true,
     },
   },
 ]
@@ -238,6 +246,9 @@ export class LyricParser {
         time: timestamp,
         duration: words.map(v => v.duration).reduce((a, b) => a + b, 0),
         content: { original: words.map(v => v.text).join(''), dynamic: { time: timestamp, words } },
+        config: {
+          isInterlude: false,
+        },
       })
     }
 
@@ -275,6 +286,9 @@ export class LyricParser {
         time: 500,
         duration: result[0]?.time - 500,
         content: { original: '' },
+        config: {
+          isInterlude: true,
+        },
       })
     }
 
@@ -469,6 +483,9 @@ export class LyricParser {
         content: {
           original: v.lyric,
         },
+        config: {
+          isInterlude: false,
+        },
       })),
     }
 
@@ -510,6 +527,9 @@ export const EMPTY_LYRIC_LINE: LyricLine = {
   duration: 0,
   content: {
     original: '',
+  },
+  config: {
+    isInterlude: false,
   },
 }
 export const EMPTY_LYRIC_INFO: LyricInfo = {
