@@ -327,9 +327,11 @@ export class LyricParser {
       })
     }
 
-    // 在英文句子中转化中文引号到英文分割号，中文标点到英文标点
     for (let i = 0; i < result.length; i++) {
       const thisLine = result[i]
+      // 标记原文为空的句子为间奏
+      if (thisLine.content.original.length === 0) thisLine.config.isInterlude = true
+      // 在英文句子中转化中文引号到英文分割号，中文标点到英文标点
       if (!this.isEnglishSentense(thisLine?.content.original)) continue
       if (thisLine?.content.dynamic?.words) {
         for (let j = 0; j < thisLine.content.dynamic?.words.length; j++) {
