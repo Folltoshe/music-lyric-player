@@ -1,4 +1,4 @@
-import { EMPTY_LYRIC_INFO, type LyricInfo, type LyricLine, type DynamicFontInfo } from './parser'
+import { EMPTY_LYRIC_INFO, type LyricInfo, type LyricLine, type DynamicWordInfo } from './parser'
 import { TimeoutTools, handleGetNowTime, noop } from './utils'
 
 export interface LineActionParams {
@@ -29,7 +29,7 @@ export interface PlayerOptions {
    * @param fontNum font number of current play
    * @param info font info
    */
-  onFontPlay?: (fontNum: number, info: DynamicFontInfo) => void
+  onFontPlay?: (fontNum: number, info: DynamicWordInfo) => void
 
   /**
    * listening lyrics seting event
@@ -83,7 +83,7 @@ export class LyricPlayer {
     max: number
   }
   private currentFontInfo: {
-    fonts: DynamicFontInfo[]
+    fonts: DynamicWordInfo[]
     num: number
     max: number
   }
@@ -127,7 +127,7 @@ export class LyricPlayer {
 
   private handleUpdateLyric() {
     this.events.onSetLyric(this.currentLyricInfo)
-    this.currentLineInfo.max = this.currentLyricInfo.lyrics.length - 1
+    this.currentLineInfo.max = this.currentLyricInfo.lines.length - 1
   }
 
   private handleGetCurrentTime() {
@@ -155,16 +155,16 @@ export class LyricPlayer {
   }
 
   private handleUpdateFontInfo() {
-    this.currentFontInfo.fonts = this.currentLyricInfo.lyrics[this.currentLineInfo.num].content.dynamic?.words || []
+    this.currentFontInfo.fonts = this.currentLyricInfo.lines[this.currentLineInfo.num].content.dynamic?.words || []
     this.currentFontInfo.max = this.currentFontInfo.fonts.length - 1
     this.currentFontInfo.num = 0
   }
 
   private handleFindCurrentLine(time: number, start = 0) {
     if (time <= 0) return 0
-    const length = this.currentLyricInfo.lyrics.length
+    const length = this.currentLyricInfo.lines.length
     for (let index = start; index < length; index++) {
-      if (time <= this.currentLyricInfo.lyrics[index].time) return index === 0 ? 0 : index - 1
+      if (time <= this.currentLyricInfo.lines[index].time) return index === 0 ? 0 : index - 1
     }
     return length - 1
   }
@@ -177,7 +177,7 @@ export class LyricPlayer {
   }
 
   private handlePlayMaxLine() {
-    const currentLine = this.currentLyricInfo.lyrics[this.currentLineInfo.num]
+    const currentLine = this.currentLyricInfo.lines[this.currentLineInfo.num]
 
     this.events.onLinePlay(this.currentLineInfo.num, currentLine)
     if (currentLine.duration > 0) {
@@ -207,13 +207,13 @@ export class LyricPlayer {
       return
     }
 
-    const currentLine = this.currentLyricInfo.lyrics[this.currentLineInfo.num]
+    const currentLine = this.currentLyricInfo.lines[this.currentLineInfo.num]
     const currentTime = this.handleGetCurrentTime()
 
     const driftTime = currentTime - currentLine.time
 
     if (driftTime >= 0 || this.currentLineInfo.num === 0) {
-      const nextLine = this.currentLyricInfo.lyrics[this.currentLineInfo.num + 1]
+      const nextLine = this.currentLyricInfo.lines[this.currentLineInfo.num + 1]
       const delay = (nextLine.time - currentLine.time - driftTime) / this.config.playbackRate
 
       if (delay > 0) {
@@ -310,7 +310,7 @@ export class LyricPlayer {
     const currentLineNum = this.handleFindCurrentLine(this.handleGetCurrentTime())
     if (this.currentLineInfo.num !== currentLineNum) {
       this.currentLineInfo.num = currentLineNum
-      this.events.onLinePlay(currentLineNum, this.currentLyricInfo.lyrics[currentLineNum])
+      this.events.onLinePlay(currentLineNum, this.currentLyricInfo.lines[currentLineNum])
     }
   }
   private handleFontPause() {
@@ -334,7 +334,7 @@ export class LyricPlayer {
    * @param currentTime play time, unit: ms
    */
   play(currentTime = 0) {
-    if (!this.currentLyricInfo.lyrics.length) return
+    if (!this.currentLyricInfo.lines.length) return
 
     this.pause()
 
@@ -368,7 +368,7 @@ export class LyricPlayer {
    */
   updatePlaybackRate(playbackRate: RequiredPlayerOptions['playbackRate']) {
     this.config.playbackRate = playbackRate
-    if (!this.currentLyricInfo.lyrics.length) return
+    if (!this.currentLyricInfo.lines.length) return
     if (!this.currentStatus.playing) return
     this.play(this.handleGetCurrentTime())
   }

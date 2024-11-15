@@ -17,7 +17,7 @@ interface PureLyricInfo {
   }[]
 }
 
-export interface DynamicFontInfo {
+export interface DynamicWordInfo {
   // 时间
   time: number
   // 时长
@@ -27,11 +27,11 @@ export interface DynamicFontInfo {
   // 配置
   config: {
     // 是否为中日韩字符
-    cjk: boolean
+    isCjk: boolean
     // 空格结尾
-    spaceEnd: boolean
+    isSpaceEnd: boolean
     // 尾部拖长音
-    trailing: boolean
+    needTrailing: boolean
   }
 }
 
@@ -50,8 +50,10 @@ export interface LyricLine {
     roman?: string
     // 动态
     dynamic?: {
+      // 总时长
       time: number
-      words: DynamicFontInfo[]
+      // 每个字符
+      words: DynamicWordInfo[]
     }
   }
   // 配置
@@ -64,9 +66,11 @@ export interface LyricLine {
 }
 export interface LyricInfo {
   // 是否可以滚动
-  scroll: boolean
+  autoScroll: boolean
   // 歌词内容
-  lyrics: LyricLine[]
+  lines: LyricLine[]
+  // 歌词数量
+  total: number
 }
 
 const PURE_MUSIC_LYRIC_LINE: LyricLine[] = [
@@ -82,11 +86,32 @@ const PURE_MUSIC_LYRIC_LINE: LyricLine[] = [
     },
   },
 ]
-const DYNAMIC_FONT_CONFIG: DynamicFontInfo['config'] = {
-  cjk: false,
-  spaceEnd: false,
-  trailing: false,
-}
+export const EMPTY_DYNAMIC_WORD: DynamicWordInfo = {
+  time: 0,
+  duration: 0,
+  text: '',
+  config: {
+    isCjk: false,
+    isSpaceEnd: false,
+    needTrailing: false,
+  },
+} as const
+export const EMPTY_LYRIC_LINE: LyricLine = {
+  time: 0,
+  duration: 0,
+  content: {
+    original: '',
+  },
+  config: {
+    isInterlude: false,
+    isNotSupportAutoScrollTip: false,
+  },
+} as const
+export const EMPTY_LYRIC_INFO: LyricInfo = {
+  autoScroll: false,
+  lines: [],
+  total: 0,
+} as const
 
 export class LyricParser {
   private readonly isShowNotSupportAutoScrollTipLine: boolean
@@ -190,7 +215,7 @@ export class LyricParser {
 
       tmp = lineMatches.groups?.line || ''
       const timestamp = this.handleParseLyricTime(lineMatches.groups?.min || '0', lineMatches.groups?.sec || '0')
-      const words: DynamicFontInfo[] = []
+      const words: DynamicWordInfo[] = []
 
       while (tmp.length > 0) {
         const wordMatches = tmp.match(this.REGEXP.DYNAMIC_LINE_WORD)
@@ -210,14 +235,14 @@ export class LyricParser {
                   time: wordTime + i * splitedDuration,
                   duration: splitedDuration,
                   text: `${subWord.trimStart()} `,
-                  config: DYNAMIC_FONT_CONFIG,
+                  config: EMPTY_DYNAMIC_WORD['config'],
                 })
               } else {
                 words.push({
                   time: wordTime + i * splitedDuration,
                   duration: splitedDuration,
                   text: subWord.trimStart(),
-                  config: DYNAMIC_FONT_CONFIG,
+                  config: EMPTY_DYNAMIC_WORD['config'],
                 })
               }
             } else if (i === 0) {
@@ -226,14 +251,14 @@ export class LyricParser {
                   time: wordTime + i * splitedDuration,
                   duration: splitedDuration,
                   text: ` ${subWord.trimStart()}`,
-                  config: DYNAMIC_FONT_CONFIG,
+                  config: EMPTY_DYNAMIC_WORD['config'],
                 })
               } else {
                 words.push({
                   time: wordTime + i * splitedDuration,
                   duration: splitedDuration,
                   text: subWord.trimStart(),
-                  config: DYNAMIC_FONT_CONFIG,
+                  config: EMPTY_DYNAMIC_WORD['config'],
                 })
               }
             } else {
@@ -241,7 +266,7 @@ export class LyricParser {
                 time: wordTime + i * splitedDuration,
                 duration: splitedDuration,
                 text: `${subWord.trimStart()} `,
-                config: DYNAMIC_FONT_CONFIG,
+                config: EMPTY_DYNAMIC_WORD['config'],
               })
             }
           })
@@ -433,9 +458,9 @@ export class LyricParser {
       const thisLine = processed[i]
       const dynamic = thisLine.content.dynamic?.words || []
       for (let j = 0; j < dynamic.length; j++) {
-        const cjk = !!dynamic[j]?.text?.match(this.REGEXP.CJK)
-        const spaceEnd = !!dynamic[j]?.text?.match(this.REGEXP.SPACE_END)
-        dynamic[j].config = { ...dynamic[j].config, cjk, spaceEnd }
+        const isCjk = !!dynamic[j]?.text?.match(this.REGEXP.CJK)
+        const isSpaceEnd = !!dynamic[j]?.text?.match(this.REGEXP.SPACE_END)
+        dynamic[j].config = { ...dynamic[j].config, isCjk, isSpaceEnd }
       }
     }
 
@@ -448,7 +473,7 @@ export class LyricParser {
       const searchIndexes: number[] = [-1]
       for (let j = 0; j < dynamic.length - 1; j++) {
         if (
-          dynamic[j]?.config.spaceEnd ||
+          dynamic[j]?.config.isSpaceEnd ||
           dynamic[j]?.text?.match(/[\,\.\，\。\!\?\？\、\；\：\…\—\~\～\·\‘\’\“\”\ﾞ]/)
         ) {
           if (!dynamic[j]?.text?.match(/[a-zA-Z]+(\'\‘\’)*[a-zA-Z]*/)) {
@@ -476,81 +501,62 @@ export class LyricParser {
         }
         const target = dynamic[targetIndex]
         if (target.duration >= 1000) {
-          target.config = { ...target.config, trailing: true }
+          target.config = { ...target.config, needTrailing: true }
         }
       }
     }
 
-    return { scroll: originalLyrics.scroll, lyrics: this.processLyric(processed) }
+    const resultLyric = this.processLyric(processed)
+    return { autoScroll: originalLyrics.scroll, lines: resultLyric, total: resultLyric.length }
   }
   private handleParseLyric({ original = '', translated = '', roman = '' }: ParseLyricProps): LyricInfo {
-    const parsedLyric = this.parsePureLyric(original)
-    const result: LyricInfo = {
-      scroll: parsedLyric.scroll,
-      lyrics: parsedLyric.lyrics.map(v => ({
-        time: v.time,
-        duration: 0,
-        content: {
-          original: v.lyric,
-        },
-        config: {
-          isInterlude: false,
-          isNotSupportAutoScrollTip: false,
-        },
-      })),
+    const pureLyric = this.parsePureLyric(original)
+    const pureLyricLines = pureLyric.lyrics.map(v => ({
+      time: v.time,
+      duration: 0,
+      content: {
+        original: v.lyric,
+      },
+      config: {
+        isInterlude: false,
+        isNotSupportAutoScrollTip: false,
+      },
+    }))
+    const pureLyricInfo: LyricInfo = {
+      autoScroll: pureLyric.scroll,
+      lines: pureLyricLines,
+      total: pureLyricLines.length,
     }
 
     this.parsePureLyric(translated).lyrics.forEach(line => {
-      const target = result.lyrics.find(v => v.time === line.time)
+      const target = pureLyricInfo.lines.find(v => v.time === line.time)
       if (target) target.content.translated = line.lyric
     })
     this.parsePureLyric(roman).lyrics.forEach(line => {
-      const target = result.lyrics.find(v => v.time === line.time)
+      const target = pureLyricInfo.lines.find(v => v.time === line.time)
       if (target) target.content.roman = line.lyric
     })
 
-    result.lyrics.sort((a, b) => a.time - b.time)
+    pureLyricInfo.lines.sort((a, b) => a.time - b.time)
 
-    const processed = this.processLyric(result.lyrics)
+    const processed = this.processLyric(pureLyricInfo.lines)
     for (let i = 0; i < processed.length; i++) {
       if (i < processed.length - 1) {
         processed[i].duration = processed[i + 1].time - processed[i].time
       }
     }
 
-    const resultLyric = this.processLyric(result.lyrics)
-    if (!result.scroll && this.isShowNotSupportAutoScrollTipLine) {
+    const resultLyric = this.processLyric(pureLyricInfo.lines)
+    if (!pureLyricInfo.autoScroll && this.isShowNotSupportAutoScrollTipLine) {
       const line = Lodash.merge(EMPTY_LYRIC_LINE, { config: { isNotSupportAutoScrollTip: true } })
       resultLyric.unshift(line)
     }
 
-    return { scroll: result.scroll, lyrics: resultLyric }
+    return { autoScroll: pureLyricInfo.autoScroll, lines: resultLyric, total: resultLyric.length }
   }
 
   parseLyric(props: ParseLyricProps): LyricInfo {
     if (props?.dynamic?.trim().length) return this.handleParseDynamicLyric(props)
     else return this.handleParseLyric(props)
   }
-}
-
-export const EMPTY_DYNAMIC_WORD: DynamicFontInfo = {
-  time: 0,
-  duration: 0,
-  text: '',
-  config: DYNAMIC_FONT_CONFIG,
-}
-export const EMPTY_LYRIC_LINE: LyricLine = {
-  time: 0,
-  duration: 0,
-  content: {
-    original: '',
-  },
-  config: {
-    isInterlude: false,
-    isNotSupportAutoScrollTip: false,
-  },
-}
-export const EMPTY_LYRIC_INFO: LyricInfo = {
-  scroll: false,
-  lyrics: [],
 }
