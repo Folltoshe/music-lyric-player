@@ -1,4 +1,4 @@
-import { findLast } from 'lodash'
+import Lodash from 'lodash'
 
 interface ParseLyricProps {
   original?: string
@@ -58,6 +58,8 @@ export interface LyricLine {
   config: {
     // 是否为间奏
     isInterlude: boolean
+    // 是否为不支持滚动提示栏
+    isNotSupportAutoScrollTip: boolean
   }
 }
 export interface LyricInfo {
@@ -76,6 +78,7 @@ const PURE_MUSIC_LYRIC_LINE: LyricLine[] = [
     },
     config: {
       isInterlude: true,
+      isNotSupportAutoScrollTip: false,
     },
   },
 ]
@@ -86,12 +89,17 @@ const DYNAMIC_FONT_CONFIG: DynamicFontInfo['config'] = {
 }
 
 export class LyricParser {
+  private readonly isShowNotSupportAutoScrollTipLine: boolean
   private readonly REGEXP = {
     CJK: /([\p{Unified_Ideograph}|\u3040-\u309F|\u30A0-\u30FF])/gu,
     SPACE_END: /\s$/,
     DYNAMIC_LINE: /^\[((?<min>[0-9]+):)?(?<sec>[0-9]+([\.:]([0-9]+))?)\](?<line>.*)/,
     DYNAMIC_LINE_WORD: /^\<(?<time>[0-9]+),(?<duration>[0-9]+)\>(?<word>[^\<]*)/,
     TIME: /^\[((?<min>[0-9]+):)?(?<sec>[0-9]+([\.:]([0-9]+))?)\]/,
+  }
+
+  constructor(isShowNotSupportAutoScrollTipLine: boolean = false) {
+    this.isShowNotSupportAutoScrollTipLine = isShowNotSupportAutoScrollTipLine
   }
 
   private calcSimularity(a: string, b: string) {
@@ -248,6 +256,7 @@ export class LyricParser {
         content: { original: words.map(v => v.text).join(''), dynamic: { time: timestamp, words } },
         config: {
           isInterlude: false,
+          isNotSupportAutoScrollTip: false,
         },
       })
     }
@@ -288,6 +297,7 @@ export class LyricParser {
         content: { original: '' },
         config: {
           isInterlude: true,
+          isNotSupportAutoScrollTip: false,
         },
       })
     }
@@ -333,7 +343,7 @@ export class LyricParser {
       originalLyrics.lyrics.forEach(line => {
         let target: PureLyricInfo['lyrics'][number] | null = null
         if (attachMatchingMode === 'equal') {
-          target = findLast(lyric, v => Math.abs(v.time - line.time) < 20)!
+          target = Lodash.findLast(lyric, v => Math.abs(v.time - line.time) < 20)!
         } else {
           lyric.forEach(v => {
             if (target) {
@@ -485,6 +495,7 @@ export class LyricParser {
         },
         config: {
           isInterlude: false,
+          isNotSupportAutoScrollTip: false,
         },
       })),
     }
@@ -507,7 +518,13 @@ export class LyricParser {
       }
     }
 
-    return { scroll: result.scroll, lyrics: this.processLyric(result.lyrics) }
+    const resultLyric = this.processLyric(result.lyrics)
+    if (!result.scroll && this.isShowNotSupportAutoScrollTipLine) {
+      const line = Lodash.merge(EMPTY_LYRIC_LINE, { config: { isNotSupportAutoScrollTip: true } })
+      resultLyric.unshift(line)
+    }
+
+    return { scroll: result.scroll, lyrics: resultLyric }
   }
 
   parseLyric(props: ParseLyricProps): LyricInfo {
@@ -530,6 +547,7 @@ export const EMPTY_LYRIC_LINE: LyricLine = {
   },
   config: {
     isInterlude: false,
+    isNotSupportAutoScrollTip: false,
   },
 }
 export const EMPTY_LYRIC_INFO: LyricInfo = {
